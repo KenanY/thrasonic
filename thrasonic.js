@@ -4,7 +4,8 @@
  * Started out as a wonderful tweetback library called "boastful", by Zach Holman.
  *
  * Now it"s being continued unofficially as "thrasonic", by Kenan Yidlirim.
- */(function() {
+ */
+(function() {
   var $;
 
   $ = jQuery;
