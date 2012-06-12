@@ -12,7 +12,10 @@ $.fn.thrasonic = (options) ->
                       You could be the first</a>.',
       limit: 50
   }
-  options = $.extend({}, defaults, options)
+
+  # Extend the settings with those the user has provided
+  if options? and typeof options is 'object'
+    options = $.extend({}, defaults, options)
 
   format_tweetback = (tweetback) ->
       formatted = """
