@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="http://code.jquery.com/qunit/git/qunit.js"></script>
-    <script src="../thrasonic.js"></script>
-    <script>
-        $(document).ready(function(){
-            // Todo: write tests
-        });
-    </script>
 </head>
 <body>
     <h1 id="qunit-header">thrasonic tests</h1>
@@ -17,7 +9,19 @@
     <h2 id="qunit-userAgent"></h2>
     <ol id="qunit-tests"></ol>
     <div id="qunit-fixture">
-        <div id="graph-placeholder" style="width: 100px; height: 50px"></div>
+        <div id="thrasonic"></div>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/qunit/git/qunit.js"></script>
+    <script src="../thrasonic.js"></script>
+    <script>
+        $(document).ready(function(){
+            module('thrasonic');
+
+            test('Selector is correct', function () {
+                equal(($('thrasonic').thrasonic()).selector, 'thrasonic');
+            });
+        });
+    </script>
 </body>
 </html>
