@@ -2,11 +2,9 @@
 {exec} = require "child_process"
 fs     = require "fs"
 
-VERSION = "1.0.0"
-
 HEADER  = """
 /*
- * thrasonic v#{ VERSION }
+ * thrasonic
  *
  * Started out as a wonderful tweetback library called "boastful", by Zach Holman.
  *
