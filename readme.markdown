@@ -34,19 +34,19 @@ Here's an old snapshot of what the footer from [Zach Holman's blog](http://zachh
 
 Feel free to browse `example.html` for a basic example. Otherwise, the general steps:
 
-1. Rock your jQuery, like:
+1\. Rock your jQuery, like:
 
 ``` html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 ```
 
-2. Deviously load up `jquery.thrasonic.js`:
+2\. Deviously load up `jquery.thrasonic.js`:
 
 ``` html
 <script src="jquery.thrasonic.js"></script>
 ```
 
-3. Lock and load into your `$(document).ready()`:
+3\. Lock and load into your `$(document).ready()`:
 
 ``` js
 $(document).ready(function() {
@@ -54,14 +54,14 @@ $(document).ready(function() {
 });
 ```
 
-4. Tell it where to go:
+4\. Tell it where to go:
 
 ``` html
 <div id="boastful"></div>
 ```
 
-5. Style accordingly. For a starting point, check out `thrasonic.css`.
-6. High-five your girlfriend.
+5\. Style accordingly. For a starting point, check out `thrasonic.css`.
+6\. High-five your girlfriend.
 
 ## Optional options
 
