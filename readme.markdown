@@ -50,7 +50,7 @@ Feel free to browse `example.html` for a basic example. Otherwise, the general s
 
 ``` js
 $(document).ready(function() {
-   $('#boastful').boastful();
+    $('#boastful').boastful();
 });
 ```
 
