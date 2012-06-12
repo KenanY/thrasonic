@@ -61,7 +61,6 @@ $(document).ready(function() {
 ```
 
 5\. Style accordingly. For a starting point, check out `thrasonic.css`.
-6\. High-five your girlfriend.
 
 ## Optional options
 
