@@ -1,9 +1,10 @@
-/*
+/*!
  * thrasonic
+ * v1.0.0
  *
- * Started out as a wonderful tweetback library called "boastful", by Zach Holman.
- *
- * Now it"s being continued unofficially as "thrasonic", by Kenan Yidlirim.
+ * https://github.com/KenanY/thrasonic
+ * by Kenan Yildirim, with original work by Zach Holman
+ * 
  */
 (function() {
   var $;
