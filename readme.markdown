@@ -1,5 +1,10 @@
 ﻿# Thrasonic is the new-and-improved tweetback library.
 
+> ### thrasonical  
+> _adj._ [Boastful](https://github.com/holman/boastful).
+> 
+> _American Heritage® Dictionary of the English Language, Fourth Edition_
+
 Lovingly crafted by [Zach Holman](http://zachholman.com). Now continued unofficially under a new name and management: [Kenan Yildirim](http://kenany.me).
 
 ## So what's a tweetback?
