@@ -10,7 +10,7 @@ A few services have started to do the same for Twitter—a "tweetback", if you w
 
 Here's the main problems with that approach:
 
-- **The content usually sucks**. I've seen a lot of systems — Disqus, for one — simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying: 
+- **The content usually sucks**. I've seen a lot of systems—Disqus, for one—simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying: 
 
 > "RT @someone RT @someoneelse RT @originaldude Hey a blog post http://example.com".
 
