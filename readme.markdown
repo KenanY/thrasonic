@@ -1,15 +1,19 @@
-# Boastful is the best tweetback library.
-### Lovingly crafted by [Zach Holman](http://zachholman.com). ([@holman](http://twitter.com/holman)).
+﻿# Thrasonic is the new-and-improved tweetback library.
+
+Lovingly crafted by [Zach Holman](http://zachholman.com). Now continued unofficially under a new name and management: [Kenan Yildirim](http://kenany.me).
 
 ## So what's a tweetback?
 
-Once upon a time there were [trackbacks](http://en.wikipedia.org/wiki/Trackback). If you wrote a blog post, and I thought it was interesting so I blogged about your blog post, trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "hey, here's some more people talking about this topic".
+Once upon a time there were [trackbacks](https://en.wikipedia.org/wiki/Trackback). If you wrote a blog post, and I thought it was interesting so I blogged about your blog post, trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "hey, here's some more people talking about this topic".
 
-A few services have started to do the same for Twitter- a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.
+A few services have started to do the same for Twitter—a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.
 
 Here's the main problems with that approach:
 
-- **The content usually sucks**. I've seen a lot of systems — Disqus, for one — simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying "RT @someone RT @someoneelse RT @originaldude Hey a blog post http://example.com".
+- **The content usually sucks**. I've seen a lot of systems — Disqus, for one — simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying: 
+
+> "RT @someone RT @someoneelse RT @originaldude Hey a blog post http://example.com".
+
 - **Most only search Twitter**. Twitter search is cool, quick, and painless, but it doesn't offer full archival access, so older tweets might not show up. It's nice to have a full list.
 - **URL shorteners are confusing**. You shouldn't just search for your main blog post URL; very few on Twitter actually do the whole thing, since characters are money, people. You'd have to search for every short URL that translates to your main post URL.
 
@@ -22,22 +26,40 @@ You end up with little heads on the footer of your blog, which acts as nifty enc
 
 ## Example
 
-I hate readmes without a pretty picture to explain everything. Here's a current snapshot of [the footer](http://zachholman.com/2010/02/the-future-of-itunes/) from [my blog](http://zachholman.com). Feel free to style away, you mad little CSS scientist you.
+Here's an old snapshot of what the footer from [Zach Holman's blog](http://zachholman.com) used to look like. Tweetbacks still look similar to this example.
 
 ![boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
 
 ## Installing
 
-Feel free to browse [example.html](http://github.com/holman/boastful/tree/master/example.html) for a basic example. Otherwise, the general steps:
+Feel free to browse `example.html` for a basic example. Otherwise, the general steps:
 
-1. Rock your jQuery, like:<br />
-`<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>`
-2. Deviously load up [jquery.boastful](http://github.com/holman/boastful/tree/master/jquery.boastful.js):<br />
-`<script type="text/javascript" src="jquery.boastful.js"></script>`
-3. Lock and load into your `$(document).ready()`:<pre><code>$(document).ready(function() {
+1. Rock your jQuery, like:
+
+``` html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+```
+
+2. Deviously load up `jquery.thrasonic.js`:
+
+``` html
+<script src="jquery.thrasonic.js"></script>
+```
+
+3. Lock and load into your `$(document).ready()`:
+
+``` js
+$(document).ready(function() {
    $('#boastful').boastful();
-});</code></pre>
-4. Tell it where to go:<br />`<div id="boastful"></div>`
+});
+```
+
+4. Tell it where to go:
+
+``` html
+<div id="boastful"></div>
+```
+
 5. Style accordingly. For a starting point, check out [boastful.css](http://github.com/holman/boastful/tree/master/boastful.css).
 6. High-five your girlfriend.
 
@@ -52,5 +74,3 @@ In your `.boastful()` call, you can pass in some options. Here's a list:
 ## Found an issue?
 
 Fork it and fix it. Or [file an issue](http://github.com/holman/boastful/issues). Or ping me on twitter (I'm [@holman](http://twitter.com/holman)). Or high-five your girlfriend some more.
-
-Thanks for checking out [boastful](http://github.com/holman/boastful); hope you enjoy it!
