@@ -1,5 +1,5 @@
 /*
- * thrasonic v1.0.0
+ * thrasonic
  *
  * Started out as a wonderful tweetback library called "boastful", by Zach Holman.
  *
