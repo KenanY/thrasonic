@@ -40,10 +40,10 @@ Feel free to browse `example.html` for a basic example. Otherwise, the general s
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 ```
 
-2\. Deviously load up `jquery.thrasonic.js`:
+2\. Deviously load up `thrasonic.js`:
 
 ``` html
-<script src="jquery.thrasonic.js"></script>
+<script src="thrasonic.js"></script>
 ```
 
 3\. Lock and load into your `$(document).ready()`:
