@@ -69,19 +69,19 @@ $(document).ready(function() {
 
 ## Optional options
 
-In your `.thrasonic()` call, you can pass in some options. Here's a list:
+In your `.thrasonic()` call, you can pass in some options:
 
 - **location**: the URL to search Twitter for (default: location.href, the current page)
-- **empty_message**: message to display if no tweets found, HTML allowed. Default: 
+- **empty_message**: message to display if no tweets are found, HTML allowed. Default: 
 
 ``` html
-No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here>You could be the first</a>.
+No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here">You could be the first</a>.
 ```
 
-- **limit**: maximum to show per page (default: 50, which is also the maximum)
+- **limit**: maximum tweetbacks to show per page (default: 50, which is also the maximum)
 
 ## Found an issue?
 
-If you've come across a problem with the code, submit it to the [Issue Tracker](https://github.com/KenanY/thrasonic/issues). Use the GitHub issue search to see if the issue has already been reported, and make sure you're using the latest version of thrasonic.
+If you've come across a problem with the code, submit it to the [Issue Tracker](https://github.com/KenanY/thrasonic/issues).
 
 Contribution enquiries should take place before any significant pull request, otherwise you risk spending a lot of time working on something that I might not want to add to thrasonic.

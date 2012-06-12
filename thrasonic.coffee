@@ -27,8 +27,8 @@ $.fn.thrasonic = (options) ->
                       <div class="thrasonic_tweet" style="display: none">
                           <div class="thrasonic_handle">@#{ tweetback.author.url.split('/').pop() }</div>
                           <div class="thrasonic_content">#{ tweetback.content }</div>
-                      </div>';
-                  </div>';
+                      </div>
+                  </div>
                   """
       return formatted
 
