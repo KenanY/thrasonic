@@ -60,7 +60,7 @@ $(document).ready(function() {
 <div id="boastful"></div>
 ```
 
-5. Style accordingly. For a starting point, check out [boastful.css](http://github.com/holman/boastful/tree/master/boastful.css).
+5. Style accordingly. For a starting point, check out `thrasonic.css`.
 6. High-five your girlfriend.
 
 ## Optional options
@@ -68,7 +68,12 @@ $(document).ready(function() {
 In your `.boastful()` call, you can pass in some options. Here's a list:
 
 - **location**: the URL to search Twitter for (default: location.href, the current page)
-- **empty_message**: message to display if no tweets found, HTML allowed (default: `No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here>You could be the first</a>.`)
+- **empty_message**: message to display if no tweets found, HTML allowed. Default: 
+
+``` html
+No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here>You could be the first</a>.
+```
+
 - **limit**: maximum to show per page (default: 50, which is also the maximum)
 
 ## Found an issue?
