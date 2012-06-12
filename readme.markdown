@@ -28,7 +28,7 @@ You end up with little heads on the footer of your blog, which acts as nifty enc
 
 Here's an old snapshot of what the footer from [Zach Holman's blog](http://zachholman.com) used to look like. Tweetbacks still look similar to this example.
 
-![boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
+![old boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
 
 ## Installing
 
@@ -50,21 +50,21 @@ Feel free to browse `example.html` for a basic example. Otherwise, the general s
 
 ``` js
 $(document).ready(function() {
-    $('#boastful').boastful();
+    $('#thrasonic').thrasonic();
 });
 ```
 
 4\. Tell it where to go:
 
 ``` html
-<div id="boastful"></div>
+<div id="thrasonic"></div>
 ```
 
 5\. Style accordingly. For a starting point, check out `thrasonic.css`.
 
 ## Optional options
 
-In your `.boastful()` call, you can pass in some options. Here's a list:
+In your `.thrasonic()` call, you can pass in some options. Here's a list:
 
 - **location**: the URL to search Twitter for (default: location.href, the current page)
 - **empty_message**: message to display if no tweets found, HTML allowed. Default: 
@@ -77,4 +77,6 @@ No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=
 
 ## Found an issue?
 
-Fork it and fix it. Or [file an issue](http://github.com/holman/boastful/issues). Or ping me on twitter (I'm [@holman](http://twitter.com/holman)). Or high-five your girlfriend some more.
+If you've come across a problem with the code, submit it to the [Issue Tracker](https://github.com/KenanY/thrasonic/issues). Use the GitHub issue search to see if the issue has already been reported, and make sure you're using the latest version of thrasonic.
+
+Contribution enquiries should take place before any significant pull request, otherwise you risk spending a lot of time working on something that I might not want to add to thrasonic.
