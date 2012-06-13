@@ -120,7 +120,7 @@ Contribution enquiries should take place before any significant pull request, ot
 Basically, after installing node.js:
 
 ```
-npm install -g coffee-script
+npm install -g coffee-script uglify-js
 git clone git://github.com/KenanY/thrasonic.git
 cd thrasonic
 cake build
