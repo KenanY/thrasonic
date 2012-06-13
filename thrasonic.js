@@ -1,10 +1,9 @@
 /*!
- * thrasonic
- * v1.0.0
+ * thrasonic v1.0.0
  *
  * https://github.com/KenanY/thrasonic
- * by Kenan Yildirim, with original work by Zach Holman
  * 
+ * by Kenan Yildirim, with original work by Zach Holman
  */
 (function() {
   var $;
@@ -16,12 +15,12 @@
     output = $(this);
     defaults = {
       location: location.href,
-      empty_message: 'No one\'s mentioned this page on Twitter yet. \
-                      <a href="https://twitter.com?status=' + location.href + '"> \
-                      You could be the first</a>.',
+      empty_message: 'No one\'s mentioned this page on Twitter yet.\
+                       <a href="https://twitter.com?status=' + location.href + '">\
+                       You could be the first</a>.',
       limit: 50
     };
-    if ((options != null) && typeof options === 'object') {
+    if (options !== null && typeof options === 'object') {
       options = $.extend({}, defaults, options);
     }
     format_tweetback = function(tweetback) {

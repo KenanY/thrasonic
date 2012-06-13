@@ -7,15 +7,15 @@ $.fn.thrasonic = (options) ->
 
       # CoffeeScript doesn't provice string interpolation via #{} tags 
       # for single quote strings
-      empty_message: 'No one\'s mentioned this page on Twitter yet. 
-                      <a href="https://twitter.com?status=' + location.href + '"> 
-                      You could be the first</a>.',
+      empty_message: 'No one\'s mentioned this page on Twitter yet.
+                       <a href="https://twitter.com?status=' + location.href + '">
+                       You could be the first</a>.',
       limit: 50
   }
 
   # Extend the settings with those the user has provided
-  if options? and typeof options is 'object'
-    options = $.extend({}, defaults, options)
+  if options isnt null and typeof options is 'object'
+    options = $.extend({}, defaults, options) 
 
   format_tweetback = (tweetback) ->
       formatted = """
