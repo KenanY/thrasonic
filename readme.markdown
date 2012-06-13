@@ -1,15 +1,15 @@
 ﻿# Thrasonic is the new-and-improved tweetback library.
 
 > ### thrasonical  
-> _adj._ [Boastful](https://github.com/holman/boastful).
+> _adj._ [Boastful][boastful].
 > 
 > _American Heritage® Dictionary of the English Language, Fourth Edition_
 
-Lovingly crafted by [Zach Holman](http://zachholman.com). Now continued unofficially under a new name and management: [Kenan Yildirim](http://kenany.me).
+Lovingly crafted by [Zach Holman][holman]. Now continued unofficially under a new name and management: [Kenan Yildirim][kenany].
 
 ## So what's a tweetback?
 
-Once upon a time there were [trackbacks](https://en.wikipedia.org/wiki/Trackback). If you wrote a blog post, and I thought it was interesting so I blogged about your blog post, trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "hey, here's some more people talking about this topic".
+Once upon a time there were [trackbacks][trackback]. If you wrote a blog post, and I thought it was interesting so I blogged about your blog post, trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "hey, here's some more people talking about this topic".
 
 A few services have started to do the same for Twitter—a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.
 
@@ -25,13 +25,13 @@ Here's the main problems with that approach:
 Luckily, this tiny jQuery plugin tries to solve all those:
 
 - **Avatars only**. James Cameron's dream: only avatars. The full content is available through a tooltip, but really you shouldn't expect the tweet content to contribute much anyway.
-- **Uses Topsy**. [Topsy](http://topsy.com) handles both the archival problem and the URL shortener problem. They crawl Twitter for who's linking to who, translating short URLs to full URLs as they go.
+- **Uses Topsy**. [Topsy][topsy] handles both the archival problem and the URL shortener problem. They crawl Twitter for who's linking to who, translating short URLs to full URLs as they go.
 
 You end up with little heads on the footer of your blog, which acts as nifty encouragement to get others to tweet and promote your content. People love seeing their face.
 
 ## Example
 
-Here's an old snapshot of what the footer from [Zach Holman's blog](http://zachholman.com) used to look like. Tweetbacks still look similar to this example.
+Here's an old snapshot of what the footer from [Zach Holman's blog](holman) used to look like. Tweetbacks still look similar to this example.
 
 ![old boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
 
@@ -51,7 +51,7 @@ Feel free to browse `example.html` for a basic example. Otherwise, the general s
 <script src="thrasonic.js"></script>
 ```
 
-3\. Execut within `$(document).ready()`:
+3\. Execute within `$(document).ready()`:
 
 ``` js
 $(document).ready(function() {
@@ -82,11 +82,11 @@ No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=
 
 ## Found an issue?
 
-If you've come across a problem with the code, submit it to the [Issue Tracker](https://github.com/KenanY/thrasonic/issues).
+If you've come across a problem with the code, submit it to the [Issue Tracker][issues].
 
 ## Versioning
 
-thrasonic's version numbering is based off [Semantic Versioning](http://semver.org/). In a nutshell, version numbers are formatted like:
+thrasonic's version numbering is based off [Semantic Versioning][semver]. In a nutshell, version numbers are formatted like:
 
 `<major>.<minor>.<patch>`
 
@@ -105,8 +105,8 @@ Contribution enquiries should take place before any significant pull request, ot
 
 ### Building
 
-* Install [node.js](http://nodejs.org/).
-* Install [CoffeeScript](http://coffeescript.org/) with `npm install -g coffee-script`.
+* Install [node.js][nodejs].
+* Install [CoffeeScript][coffee] with `npm install -g coffee-script`.
 * Clone thrasonic: `git clone git://github.com/KenanY/thrasonic.git`.
 * `cd` into it and build using `cake build`.
 
@@ -122,3 +122,15 @@ cake build
 ### Releasing
 
 Upgrade the version number with `cake -v VERSION upgrade`. Note that this is only used to release new thrasonic versions, and is generally not wanted in pull requests.
+
+
+   [boastful]: https://github.com/holman/boastful
+   [holman]: http://zachholman.com/
+   [kenany]: http://kenany.me/
+   [trackback]: https://en.wikipedia.org/wiki/Trackback
+   [topsy]: http://topsy.com/
+   [issues]: https://github.com/KenanY/thrasonic/issues
+   [semver]: http://semver.org/
+   [nodejs]: http://nodejs.org/
+   [coffee]: http://coffeescript.org/
+
