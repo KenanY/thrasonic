@@ -82,7 +82,12 @@ No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=
 
 ## Found an issue?
 
-If you've come across a problem with the code, submit it to the [Issue Tracker][issues].
+If you've come across a problem with the code, submit it to the [Issue Tracker][issues].  When filing a new bug, please remember to include:
+
+* The thrasonic version you're using
+* Your platform/OS version
+* Step to reproduce the error, along with the results you get compared to the results you expext
+* For most issues, it will help to include a [reduced test case][reduce] where you've isolated the issue. Use [jsFiddle][jsfiddle].
 
 ## Versioning
 
@@ -98,6 +103,8 @@ Here's a gist of the Semantic Versioning guidelines:
 * Also, only changes to `thrasonic.coffee` (which affects `thrasonic.js` and `thrasonic.min.js`) or `thrasonic.css` deserve to update the version number.
 
 ## Contribute
+
+You want to help? Awesome!
 
 ### Enquiries
 
@@ -125,12 +132,14 @@ Upgrade the version number with `cake -v VERSION upgrade`. Note that this is onl
 
 
    [boastful]: https://github.com/holman/boastful
-   [holman]: http://zachholman.com/
-   [kenany]: http://kenany.me/
-   [trackback]: https://en.wikipedia.org/wiki/Trackback
-   [topsy]: http://topsy.com/
-   [issues]: https://github.com/KenanY/thrasonic/issues
-   [semver]: http://semver.org/
-   [nodejs]: http://nodejs.org/
    [coffee]: http://coffeescript.org/
-
+   [holman]: http://zachholman.com/
+   [issues]: https://github.com/KenanY/thrasonic/issues
+   [jsfiddle]: http://jsfiddle.net/
+   [kenany]: http://kenany.me/
+   [nodejs]: http://nodejs.org/
+   [reduce]: http://css-tricks.com/reduced-test-cases/
+   [semver]: http://semver.org/
+   [topsy]: http://topsy.com/
+   [trackback]: https://en.wikipedia.org/wiki/Trackback
+   
