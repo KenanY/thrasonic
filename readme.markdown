@@ -84,4 +84,41 @@ No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=
 
 If you've come across a problem with the code, submit it to the [Issue Tracker](https://github.com/KenanY/thrasonic/issues).
 
+## Versioning
+
+thrasonic's version numbering is based off [Semantic Versioning](http://semver.org/). In a nutshell, version numbers are formatted like:
+
+`<major>.<minor>.<patch>`
+
+Here's a gist of the Semantic Versioning guidelines:
+
+* If the changes aren't backward compatible (user needs to change something on their site in order to keep thrasonic going), then I bump the major (and reset the minor and patch).
+* New additions that don't break backward compatibility (user will not see a significant change in their tweetbacks) will bump the minor (and resets the patch).
+* Bug fixes and misc changes will bump the patch number.
+* Also, only changes to `thrasonic.coffee` (which affects `thrasonic.js` and `thrasonic.min.js`) or `thrasonic.css` deserve to update the version number.
+
+## Contribute
+
+### Enquiries
+
 Contribution enquiries should take place before any significant pull request, otherwise you risk spending a lot of time working on something that I might not want to add to thrasonic.
+
+### Building
+
+* Install [node.js](http://nodejs.org/).
+* Install [CoffeeScript](http://coffeescript.org/) with `npm install -g coffee-script`.
+* Clone thrasonic: `git clone git://github.com/KenanY/thrasonic.git`.
+* `cd` into it and build using `cake build`.
+
+Basically, after installing node.js:
+
+```
+npm install -g coffee-script
+git clone git://github.com/KenanY/thrasonic.git
+cd thrasonic
+cake build
+```
+
+### Releasing
+
+Upgrade the version number with `cake -v VERSION upgrade`. Note that this is only used to release new thrasonic versions, and is generally not wanted in pull requests.
