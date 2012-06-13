@@ -86,7 +86,7 @@ If you've come across a problem with the code, submit it to the [Issue Tracker][
 
 * The thrasonic version you're using
 * Your platform/OS version
-* Step to reproduce the error, along with the results you get compared to the results you expext
+* Steps to reproduce the issue, along with the results you get compared to the results you expect
 * For most issues, it will help to include a [reduced test case][reduce] where you've isolated the issue. Use [jsFiddle][jsfiddle].
 
 ## Versioning
