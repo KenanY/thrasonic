@@ -1,0 +1,26 @@
+; http://editorconfig.org/
+root = true
+
+; Unix-style newlines
+[*]
+end_of_line = LF
+
+[.html]
+indent_style = space
+indent_size = 4
+
+[.css]
+indent_style = space
+indent_size = 4
+
+[Cakefile]
+indent_style = space
+indent_size = 2
+
+[*.coffee]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+indent_size = 2
