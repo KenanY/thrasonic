@@ -45,10 +45,10 @@ Feel free to browse `example.html` for a basic example. Otherwise, the general s
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 ```
 
-2\. Then `thrasonic.js`:
+2\. Then `thrasonic.min.js`:
 
 ``` html
-<script src="thrasonic.js"></script>
+<script src="thrasonic.min.js"></script>
 ```
 
 3\. Execute within `$(document).ready()`:
