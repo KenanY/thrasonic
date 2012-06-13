@@ -113,7 +113,7 @@ Contribution enquiries should take place before any significant pull request, ot
 ### Building
 
 * Install [node.js][nodejs].
-* Install [CoffeeScript][coffee] with `npm install -g coffee-script`.
+* Install [CoffeeScript][coffee] and [UglifyJS][uglify] with `npm install -g coffee-script uglify-js`.
 * Clone thrasonic: `git clone git://github.com/KenanY/thrasonic.git`.
 * `cd` into it and build using `cake build`.
 
@@ -142,4 +142,4 @@ Upgrade the version number with `cake -v VERSION upgrade`. Note that this is onl
    [semver]: http://semver.org/
    [topsy]: http://topsy.com/
    [trackback]: https://en.wikipedia.org/wiki/Trackback
-   
+   [uglify]: http://marijnhaverbeke.nl/uglifyjs
