@@ -95,7 +95,7 @@ thrasonic's version numbering is based off [Semantic Versioning][semver]. In a n
 
 `<major>.<minor>.<patch>`
 
-Here's a gist of the Semantic Versioning guidelines:
+Here's the gist of the Semantic Versioning guidelines:
 
 * If the changes aren't backward compatible (user needs to change something on their site in order to keep thrasonic going), then I bump the major (and reset the minor and patch).
 * New additions that don't break backward compatibility (user will not see a significant change in their tweetbacks) will bump the minor (and resets the patch).
