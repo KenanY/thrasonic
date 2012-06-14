@@ -15,18 +15,18 @@ $.fn.thrasonic = (options) ->
   options = $.extend({}, defaults, options)
 
   format_tweetback = (tweetback) ->
-      formatted = """
-                  <div class="thrasonic">
-                      <a href="#{ tweetback.permalink_url }">
-                          <img src="#{ tweetback.author.photo_url }" />
-                      </a>
-                      <div class="thrasonic_pointer"></div>
-                      <div class="thrasonic_tweet" style="display: none">
-                          <div class="thrasonic_handle">@#{ tweetback.author.url.split('/').pop() }</div>
-                          <div class="thrasonic_content">#{ tweetback.content }</div>
-                      </div>
-                  </div>
-                  """
+    """
+    <div class="thrasonic">
+        <a href="#{ tweetback.permalink_url }">
+            <img src="#{ tweetback.author.photo_url }" />
+        </a>
+        <div class="thrasonic_pointer"></div>
+        <div class="thrasonic_tweet" style="display: none">
+            <div class="thrasonic_handle">@#{ tweetback.author.url.split('/').pop() }</div>
+            <div class="thrasonic_content">#{ tweetback.content }</div>
+        </div>
+    </div>
+    """
 
   parse_request = (data) ->
     author_urls = []
