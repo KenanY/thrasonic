@@ -15,9 +15,7 @@
     output = $(this);
     defaults = {
       location: location.href,
-      empty_message: 'No one\'s mentioned this page on Twitter yet.\
-                       <a href="https://twitter.com?status=' + location.href + '">\
-                       You could be the first</a>.',
+      empty_message: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>.",
       limit: 50
     };
     options = $.extend({}, defaults, options);

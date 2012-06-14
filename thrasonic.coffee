@@ -6,14 +6,9 @@ $.fn.thrasonic = (options) ->
   # Default options
   defaults =
       location: location.href,
-
-      # CoffeeScript doesn't provice string interpolation via #{} tags
-      #  for single quote strings
-      #
-      # Also, there's bad escapement of EOL here. Should be fixed later.
-      empty_message: 'No one\'s mentioned this page on Twitter yet.
-                       <a href="https://twitter.com?status=' + location.href + '">
-                       You could be the first</a>.',
+      empty_message: "No one's mentioned this page on Twitter yet.
+                       <a href=\"https://twitter.com?status=#{ location.href }\">
+                       You could be the first</a>.",
       limit: 50
 
   # Extend the settings with those the user has provided
