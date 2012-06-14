@@ -2,7 +2,7 @@ $ = jQuery
 
 $.fn.thrasonic = (options) ->
   output = $(@)
-  defaults = {
+  defaults = 
       location: location.href,
 
       # CoffeeScript doesn't provice string interpolation via #{} tags 
@@ -11,7 +11,6 @@ $.fn.thrasonic = (options) ->
                        <a href="https://twitter.com?status=' + location.href + '">
                        You could be the first</a>.',
       limit: 50
-  }
 
   # Extend the settings with those the user has provided
   if options isnt null and typeof options is 'object'
