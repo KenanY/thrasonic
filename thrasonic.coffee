@@ -12,7 +12,7 @@ $.fn.thrasonic = (options) ->
       limit: 50
 
   # Extend the settings with those the user has provided
-  options = $.extend({}, defaults, options)
+  options = $.extend {}, defaults, options
 
   format_tweetback = (tweetback) ->
     """
