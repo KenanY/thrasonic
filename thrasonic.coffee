@@ -55,18 +55,16 @@ $.fn.thrasonic = (options) ->
       $('.thrasonic').mouseout(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').hide() )
     else
       # Nothing was found; display empty message
-      output.append(options.empty_message)
+      output.append options.empty_message
 
   # Topsy, we can haz tweets, pl0x?
-  $.ajax {
-    url: 'http://otter.topsy.com/trackbacks.js',
-    data: {
-      url: options.location,
+  $.ajax
+    url: 'http://otter.topsy.com/trackbacks.js'
+    data:
+      url: options.location
       perpage: options.limit
-    },
-    success: parse_request,
+    success: parse_request
     dataType:'jsonp'
-  }
 
   # That's all, folks!
   return @
