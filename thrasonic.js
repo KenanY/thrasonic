@@ -52,22 +52,22 @@
             top: $(this).position().top + 15
           });
         });
-        $('.thrasonic').mouseout(function() {
+        return $('.thrasonic').mouseout(function() {
           return $(this).children('.thrasonic_tweet, .thrasonic_pointer').hide();
         });
       } else {
-        output.append(options.empty_message);
+        return output.append(options.empty_message);
       }
-      return $.ajax({
-        url: 'http://otter.topsy.com/trackbacks.js',
-        data: {
-          url: options.location,
-          perpage: options.limit
-        },
-        success: parse_request,
-        dataType: 'jsonp'
-      });
     };
+    $.ajax({
+      url: 'http://otter.topsy.com/trackbacks.js',
+      data: {
+        url: options.location,
+        perpage: options.limit
+      },
+      success: parse_request,
+      dataType: 'jsonp'
+    });
     return this;
   };
 

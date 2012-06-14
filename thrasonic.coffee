@@ -54,14 +54,14 @@ $.fn.thrasonic = (options) ->
     else
       output.append(options.empty_message)
 
-    $.ajax {
-      url: 'http://otter.topsy.com/trackbacks.js',
-      data: {
-          url: options.location,
-          perpage: options.limit
-        },
-      success:parse_request,
-      dataType:'jsonp'
-    }
+  $.ajax {
+    url: 'http://otter.topsy.com/trackbacks.js',
+    data: {
+      url: options.location,
+      perpage: options.limit
+    },
+    success: parse_request,
+    dataType:'jsonp'
+  }
 
   return @
