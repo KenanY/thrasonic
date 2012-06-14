@@ -27,7 +27,6 @@ $.fn.thrasonic = (options) ->
                       </div>
                   </div>
                   """
-      return formatted
 
   parse_request = (data) ->
     author_urls = []
