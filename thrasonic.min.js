@@ -1,5 +1,5 @@
 /*!
- * thrasonic 1.0.2
+ * thrasonic 1.0.3
  *
  * https://github.com/KenanY/thrasonic
  *
