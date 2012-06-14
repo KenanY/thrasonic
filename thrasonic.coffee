@@ -32,7 +32,7 @@ $.fn.thrasonic = (options) ->
   parse_request = (data) ->
     author_urls = []
 
-    # Topysy actually found tweetbacks
+    # Topsy actually found tweetbacks
     if data.response.list.length > 0
       $.each data.response.list, (i, tweetback) ->
         if $.inArray(tweetback.author.url, author_urls) > -1
