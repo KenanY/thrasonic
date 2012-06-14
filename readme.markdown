@@ -1,8 +1,8 @@
 ﻿# Thrasonic is the new-and-improved tweetback library.
 
-> ### thrasonical  
+> ### thrasonical
 > _adj._ [Boastful][boastful].
-> 
+>
 > _American Heritage® Dictionary of the English Language, Fourth Edition_
 
 Lovingly crafted by [Zach Holman][holman]. Now continued unofficially under a new name and management: [Kenan Yildirim][kenany].
@@ -15,7 +15,7 @@ A few services have started to do the same for Twitter—a "tweetback", if you w
 
 Here's the main problems with that approach:
 
-- **The content usually sucks**. I've seen a lot of systems—Disqus, for one—simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying: 
+- **The content usually sucks**. I've seen a lot of systems—Disqus, for one—simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying:
 
 > "RT @someone RT @someoneelse RT @originaldude Hey a blog post http://example.com".
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
 In your `.thrasonic()` call, you can pass in some options:
 
 - **location**: the URL to search Twitter for (default: location.href, the current page)
-- **empty_message**: message to display if no tweets are found, HTML allowed. Default: 
+- **empty_message**: message to display if no tweets are found, HTML allowed. Default:
 
 ``` html
 No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here">You could be the first</a>.
