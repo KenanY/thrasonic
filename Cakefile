@@ -8,7 +8,7 @@ Very much of this is based off 4chan-x's Cakefile: http://git.io/stmoRA
 {exec} = require "child_process"
 fs     = require "fs"
 
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 
 HEADER  = """
 /*!
