@@ -4,6 +4,27 @@
     <meta charset="utf-8">
     <title>thrasonic example</title>
     <link rel="stylesheet" href="thrasonic.css">
+    <style>
+        html {
+            font-family: sans-serif;
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        body {
+            float: none;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 980px;
+            min-width: 727px;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+        img { -ms-interpolation-mode: bicubic; }
+    </style>
 </head>
 <body>
     <h1>Tweetbacks</h1>
@@ -14,9 +35,9 @@
     <script>
         $(document).ready(function() {
             $('#thrasonic').thrasonic({
-                location: 'http://zachholman.com'
-                // limit: 50
-                // empty_message: ''
+                location: 'http://bitcoin.org/',
+                limit: 50,
+                empty_message: 'you shouldn\'t see this in the demo'
             });
         });
     </script>

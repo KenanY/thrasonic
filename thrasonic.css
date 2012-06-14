@@ -6,7 +6,10 @@
 .thrasonic {
     display: inline;
 }
-.thrasonic img{
+.thrasonic a {
+    text-decoration: none;
+}
+.thrasonic img {
     width: 48px;
     height: 48px;
     margin: 3px;
@@ -18,7 +21,7 @@
     -moz-border-radius-topleft: 7px;
     -moz-border-radius-bottomright: 7px;
 }
-.thrasonic .thrasonic_pointer{
+.thrasonic .thrasonic_pointer {
     position: absolute;
     z-index: 999;
     left: -9999px;
@@ -32,7 +35,7 @@
     border-bottom: 10px solid #000;
     border-top: 0;
 }
-.thrasonic .thrasonic_tweet{
+.thrasonic .thrasonic_tweet {
     position: absolute;
     z-index: 999;
     left: -9999px;
@@ -47,7 +50,7 @@
     -webkit-border-radius: 7px;
             border-radius: 7px;
 }
-.thrasonic .thrasonic_handle{
+.thrasonic .thrasonic_handle {
     font-size: 13px;
     font-weight: bold;
 }
