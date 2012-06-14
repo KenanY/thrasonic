@@ -2,7 +2,7 @@
  * thrasonic 1.0.2
  *
  * https://github.com/KenanY/thrasonic
- * 
+ *
  * by Kenan Yildirim, with original work by Zach Holman
  */
 (function() {
@@ -20,9 +20,7 @@
                        You could be the first</a>.',
       limit: 50
     };
-    if (options !== null && typeof options === 'object') {
-      options = $.extend({}, defaults, options);
-    }
+    options = $.extend({}, defaults, options);
     format_tweetback = function(tweetback) {
       var formatted;
       formatted = "<div class=\"thrasonic\">\n    <a href=\"" + tweetback.permalink_url + "\">\n        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";

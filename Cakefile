@@ -15,7 +15,7 @@ HEADER  = """
  * thrasonic #{ VERSION }
  *
  * https://github.com/KenanY/thrasonic
- * 
+ *
  * by Kenan Yildirim, with original work by Zach Holman
  */
 

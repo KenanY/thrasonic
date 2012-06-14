@@ -2,19 +2,22 @@ $ = jQuery
 
 $.fn.thrasonic = (options) ->
   output = $(@)
-  defaults = 
+
+  # Default options
+  defaults =
       location: location.href,
 
-      # CoffeeScript doesn't provice string interpolation via #{} tags 
-      # for single quote strings
+      # CoffeeScript doesn't provice string interpolation via #{} tags
+      #  for single quote strings
+      #
+      # Also, there's bad escapement of EOL here. Should be fixed later.
       empty_message: 'No one\'s mentioned this page on Twitter yet.
                        <a href="https://twitter.com?status=' + location.href + '">
                        You could be the first</a>.',
       limit: 50
 
   # Extend the settings with those the user has provided
-  if options isnt null and typeof options is 'object'
-    options = $.extend({}, defaults, options) 
+  options = $.extend({}, defaults, options)
 
   format_tweetback = (tweetback) ->
       formatted = """
@@ -33,14 +36,17 @@ $.fn.thrasonic = (options) ->
 
   parse_request = (data) ->
     author_urls = []
+
+    # Topysy actually found tweetbacks
     if data.response.list.length > 0
-      $.each data.response.list, (i,tweetback) ->
+      $.each data.response.list, (i, tweetback) ->
         if $.inArray(tweetback.author.url, author_urls) > -1
           return true
 
         author_urls.push(tweetback.author.url)
         output.append(format_tweetback(tweetback))
 
+      # Show tweet when avatar is mouseover'd
       $('.thrasonic').mouseover(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').show(); )
       $('.thrasonic').mousemove (kmouse) ->
         $(@).children('.thrasonic_tweet').css
@@ -50,10 +56,13 @@ $.fn.thrasonic = (options) ->
           left: $(@).position().left + 18,
           top: $(@).position().top + 15
 
+      # Hide it when mouse leaves
       $('.thrasonic').mouseout(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').hide() )
     else
+      # Nothing was found; display empty message
       output.append(options.empty_message)
 
+  # Topsy, we can haz tweets, pl0x?
   $.ajax {
     url: 'http://otter.topsy.com/trackbacks.js',
     data: {
@@ -64,4 +73,5 @@ $.fn.thrasonic = (options) ->
     dataType:'jsonp'
   }
 
+  # That's all, folks!
   return @

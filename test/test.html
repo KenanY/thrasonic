@@ -18,13 +18,13 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://code.jquery.com/qunit/git/qunit.js"></script>
-    <script src="../thrasonic.min.js"></script>
+    <script src="../thrasonic.js"></script>
     <script>
         $(document).ready(function(){
             module('thrasonic');
 
             test('Selector is correct', function () {
-                equal(($('thrasonic').thrasonic()).selector, 'thrasonic');
+                equal(($('#thrasonic').thrasonic()).selector, '#thrasonic');
             });
         });
     </script>
