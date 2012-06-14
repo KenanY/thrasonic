@@ -37,8 +37,7 @@ task 'upgrade', (options) ->
   for file in [CAKEFILE, INFILE, OUTFILE, MINFILE]
     data = fs.readFileSync file, 'utf8'
     fs.writeFileSync file, data.replace regexp, version
-  exec "git commit -am 'Release #{version}.'"
-  exec "git tag -a #{version} -m '#{version}'"
+  exec "git commit -am 'Release #{version}' && git tag -a #{version} -m '#{version}'"
 
 task "build", ->
   exec "coffee --print #{ INFILE }", (err, stdout, stderr) ->
