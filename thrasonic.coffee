@@ -38,7 +38,7 @@ $.fn.thrasonic = (options) ->
           return true
 
         author_urls.push tweetback.author.url
-        output.append format_tweetback tweetback
+        output.append format_tweetback(tweetback)
 
       # Show tweet when avatar is mouseover'd
       $('.thrasonic').mouseover(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').show(); )
