@@ -123,6 +123,13 @@ h2,
 h3 {
     font-family: 'Garamond', 'Georgia', serif;
 }
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+a:hover {
+    border-bottom: 1px solid #999;
+}
 a, a:visited {
     color: #1863A0;
 }
@@ -152,13 +159,6 @@ header h2 {
 }
 .sidebar {
     position: fixed;
-}
-.sidebar a {
-    text-decoration: none;
-    border-bottom: 1px dotted #999;
-}
-.sidebar a:hover {
-    border-bottom: 1px solid #999;
 }
 .sidebar ul {
     padding: 0;
