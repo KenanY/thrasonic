@@ -15,7 +15,6 @@ PRINT
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
 }
 
 /*------------------------------------*\
@@ -112,6 +111,10 @@ table{border-collapse:collapse;border-spacing:0}
     $MAIN
 \*------------------------------------*/
 html { background: #fff; }
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
 h1,
 h2,
 h3,
@@ -304,6 +307,11 @@ pre .variable.global, pre .variable.class, pre .variable.instance {
     .show-on-phones { display: block !important; }
     .show-on-tablets { display: none !important; }
     .show-on-desktops { display: none !important; }
+
+    header { margin-top: 40px; }
+    header h1 { font-size: 52px; font-size: 5.2rem; }
+    header h2 { font-size: 16px; font-size: 1.6rem; padding: 0 0; margin-bottom: 24px; }
+    .doc { top: -100px; }
 }
 @media only screen and (max-width: 1280px) and (min-width: 768px) {
     .touch .hide-on-phones { display: block !important; }
