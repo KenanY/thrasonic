@@ -123,10 +123,6 @@ h2,
 h3 {
     font-family: 'Garamond', 'Georgia', serif;
 }
-a {
-    display: inline-block;
-    position: relative;
-}
 a, a:visited {
     color: hsl(207, 74%, 36%);
 }
