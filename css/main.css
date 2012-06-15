@@ -1,3 +1,16 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/*
+BOX-SIZING
+NORMALIZE
+GRID, THANKS ZURB FOUNDATION!
+MAIN
+CODE
+MOBILE
+PRINT
+*/
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -59,16 +72,8 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
 /*------------------------------------*\
-    $MAIN
+    $GRID from ZURB's Foundation
 \*------------------------------------*/
-html {
-    background: #fff;
-}
-body {
-    font: 22px/32px "Helvetica Neue", Helvetica, Arial, Helmet, Freesans, sans-serif;
-    width: 600px;
-    margin: 0 auto;
-}
 .container { padding: 0 20px; }
 .row {
     width: 100%;
@@ -77,17 +82,164 @@ body {
     margin: 0 auto;
 }
 .row .row { min-width: 0; }
+.column, .columns {
+    margin-left: 4.4%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+}
+.column:first-child, .columns:first-child { margin-left: 0; }
+[class*="column"] + [class*="column"]:last-child { float: right; }
+[class*="column"] + [class*="column"].end { float: left; }
+.row .one { width: 4.27503%; }
+.row .two { width: 12.97730%; }
+.row .three { width: 21.67957%; }
+.row .four { width: 30.37999%; }
+.row .five { width: 39.08411%; }
+.row .six { width: 47.78638%; }
+.row .seven { width: 56.48865%; }
+.row .eight { width: 65.19092%; }
+.row .nine { width: 73.89319%; }
+.row .ten { width: 82.59546%; }
+.row .eleven { width: 91.29773%; }
+.row .twelve { width: 100%; }
+.row .centered { float: none; margin: 0 auto; }
+
+.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html {
+    background: #fff;
+}
+body {
+    font: 22px/32px Georgia, Times, “Times New Roman”, serif;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Garamond', 'Georgia', serif;
+}
+header {
+  text-align: center;
+  position: relative;
+  margin-top: -605px;
+}
+header h1 {
+    font-weight: 300;
+    font-size: 76px;
+    font-size: 7.6rem;
+    position: relative;
+    margin-bottom: 0;
+}
+header h2 {
+    font-weight: 300;
+    font-size: 20px;
+    font-size: 2rem;
+    margin-bottom: 34px;
+    padding: 0 23%;
+}
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
-::-moz-selection { background: #55FF00; color: #fff; text-shadow: none; }
-::selection { background: #55FF00; color: #fff; text-shadow: none; }
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Solarized Light theme
+ *
+ * Adaptation of Solarized Light from ethanschoonover.com/solarized
+ *
+ * @author Ethan Schoonover
+ * @author David Litmark
+ * @version 1.0.0
+ */
+pre {
+    background: #fdf6e3;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 0px;
+    padding: 10px;
+    color: #657b83;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+pre, code {
+    font-family: 'Monaco', courier, monospace;
+}
+pre .comment {
+    color: #93a1a1;
+}
+pre .constant {
+    color: #657b83;
+}
+pre .constant.language {
+    color: #268bd2;
+}
+pre .constant.regexp {
+    color: #2aa198;
+}
+pre .storage {
+    color: #268bd2;
+}
+pre .string, pre .comment.docstring {
+    color: #2aa198;
+}
+pre .support.tag.script, pre .support.tag.style {
+    color: #2aa198;
+}
+pre .string.regexp {
+    color: #2aa198;
+}
+pre .string.regexp.open, pre .string.regexp.close {
+    color: #2aa198;
+}
+pre .keyword, pre .selector {
+    color: #859900;
+}
+pre .inherited-class {
+    font-style: italic;
+}
+pre .entity {
+    color: #b58900;
+}
+pre .support, *[data-language="c"] .function.call {
+    color: #859900;
+}
+pre .support.method {
+    color: #657b83;
+}
+pre .support.property {
+    color: #657b83;
+}
+pre .variable.global, pre .variable.class, pre .variable.instance {
+    color: #657b83;
+}
 
 /*------------------------------------*\
     $MOBILE
 \*------------------------------------*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 727px) {
     body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
     .container { min-width: 0; margin-left: 0; margin-right: 0; }
+    .row { width: 100%; min-width: 0; margin-left: 0; margin-right: 0; }
+    .row .row .column, .row .row .columns { padding: 0; }
+    .column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
+    .column:last-child, .columns:last-child { margin-right: 0; float: none; }
+    [class*="column"] + [class*="column"]:last-child { float: none; }
+    .column:before, .columns:before, .column:after, .columns:after { content:""; display:table; }
+    .column:after, .columns:after { clear: both; }
 }
 
 /*------------------------------------*\

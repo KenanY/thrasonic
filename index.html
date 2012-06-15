@@ -17,12 +17,35 @@
 
     <div class="container">
         <div class="row">
-
+            <header class="twelve columns centered">
+                <h1>thrasonic</h1>
+                <h2>the new-and-improved tweetback library</h2>
+            </header>
+        </div>
+        <div class="row">
+            <div class="three columns">
+                <h3>Useful Links</h3>
+            </div>
+            <div class="nine columns">
+                <h2>So what's a tweetback?</h2>
+                <p>Once upon a time there were <a href="https://en.wikipedia.org/wiki/Trackback">trackbacks</a>. If you wrote a blog post, and I thought it was interesting so I blogged about your blog post, trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "hey, here's some more people talking about this topic".</p>
+                <p>A few services have started to do the same for Twitter—a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.</p>
+                <p>Here's the main problems with that approach:</p>
+                <ul>
+                <li><strong>The content usually sucks</strong>. I've seen a lot of systems—Disqus, for one—simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying:</li>
+                </ul>
+                <blockquote><p>"RT @someone RT @someoneelse RT @originaldude Hey a blog post <a href="http://example.com">http://example.com</a>".</p></blockquote>
+                <h2>Installing</h2>
+                <pre><code data-language="javascript">$(document).ready(function() {
+    $('#thrasonic').thrasonic();
+});</code></pre>
+            </div>
         </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/vendor/rainbow.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script>
