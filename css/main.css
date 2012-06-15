@@ -116,12 +116,25 @@ html {
     background: #fff;
 }
 body {
-    font: 22px/32px Georgia, Times, “Times New Roman”, serif;
+    font: 19px/31px Georgia, Times, “Times New Roman”, serif;
 }
 h1,
 h2,
 h3 {
     font-family: 'Garamond', 'Georgia', serif;
+}
+a {
+    display: inline-block;
+    position: relative;
+}
+a, a:visited {
+    color: hsl(207, 74%, 36%);
+}
+
+blockquote {
+    border-left: 4px solid #DDD;
+    padding: 0 15px;
+    color: #777;
 }
 header {
   text-align: center;
@@ -141,6 +154,12 @@ header h2 {
     font-size: 2rem;
     margin-bottom: 34px;
     padding: 0 23%;
+}
+.sidebar {
+    position: fixed;
+}
+.sidebar ul {
+    list-style: none;
 }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
