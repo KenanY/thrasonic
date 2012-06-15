@@ -119,6 +119,7 @@ h4,
 h5,
 h6 {
     font-family: 'Garamond', 'Georgia', serif;
+    font-weight: normal;
 }
 a {
     text-decoration: none;
