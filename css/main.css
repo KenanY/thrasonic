@@ -170,10 +170,10 @@ header h2 {
     overflow: hidden;
 }
 .sidebar {
-    font: 13px/21px Georgia, Times, “Times New Roman”, serif;
     position: fixed;
 }
 .sidebar p {
+    font: 13px/21px Georgia, Times, “Times New Roman”, serif;
     color: #555;
     margin: 10px 0;
 }
