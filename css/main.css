@@ -158,6 +158,13 @@ header h2 {
 .sidebar {
     position: fixed;
 }
+.sidebar a {
+    border-bottom: 1px solid #999;
+}
+.sidebar a:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
 .sidebar ul {
     list-style: none;
 }
