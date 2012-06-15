@@ -115,9 +115,6 @@ table{border-collapse:collapse;border-spacing:0}
 html {
     background: #fff;
 }
-body {
-    font: 19px/31px Georgia, Times, “Times New Roman”, serif;
-}
 h1,
 h2,
 h3 {
@@ -157,7 +154,11 @@ header h2 {
     margin-bottom: 34px;
     padding: 0 23%;
 }
+.doc {
+    font: 17px/27px Georgia, Times, “Times New Roman”, serif;
+}
 .sidebar {
+    font: 13px/21px Georgia, Times, “Times New Roman”, serif;
     position: fixed;
 }
 .sidebar p {
