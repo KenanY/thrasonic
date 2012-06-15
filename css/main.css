@@ -104,7 +104,6 @@ table{border-collapse:collapse;border-spacing:0}
 .row .eleven { width: 91.29773%; }
 .row .twelve { width: 100%; }
 .row .centered { float: none; margin: 0 auto; }
-
 .row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
 .row:after, .clearfix:after { clear: both; }
 .row, .clearfix { zoom: 1; }
@@ -112,9 +111,7 @@ table{border-collapse:collapse;border-spacing:0}
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
-html {
-    background: #fff;
-}
+html { background: #fff; }
 h1,
 h2,
 h3,
