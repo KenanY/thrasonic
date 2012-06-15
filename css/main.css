@@ -154,10 +154,10 @@ header h2 {
     position: fixed;
 }
 .sidebar a {
+    text-decoration: none;
     border-bottom: 1px solid #999;
 }
 .sidebar a:hover {
-    text-decoration: none;
     border-bottom: 1px dotted #999;
 }
 .sidebar ul {
