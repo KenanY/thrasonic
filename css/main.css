@@ -195,7 +195,7 @@ pre {
     margin-bottom: 20px;
 }
 pre, code {
-    font-family: 'Monaco', courier, monospace;
+    font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;
 }
 pre .comment {
     color: #93a1a1;
