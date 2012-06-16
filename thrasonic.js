@@ -11,7 +11,7 @@
   $ = jQuery;
 
   $.fn.thrasonic = function(options) {
-    var defaults, format_tweetback, output, parse_request;
+    var defaults, formatTweetback, output, parseRequest;
     output = $(this);
     defaults = {
       location: location.href,
@@ -19,10 +19,10 @@
       limit: 50
     };
     options = $.extend({}, defaults, options);
-    format_tweetback = function(tweetback) {
+    formatTweetback = function(tweetback) {
       return "<div class=\"thrasonic\">\n    <a href=\"" + tweetback.permalink_url + "\">\n        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";
     };
-    parse_request = function(data) {
+    parseRequest = function(data) {
       var author_urls;
       author_urls = [];
       if (data.response.list.length > 0) {
@@ -31,7 +31,7 @@
             return true;
           }
           author_urls.push(tweetback.author.url);
-          return output.append(format_tweetback(tweetback));
+          return output.append(formatTweetback(tweetback));
         });
         $('.thrasonic').mouseover(function() {
           return $(this).children('.thrasonic_tweet, .thrasonic_pointer').show();
@@ -59,7 +59,7 @@
         url: options.location,
         perpage: options.limit
       },
-      success: parse_request,
+      success: parseRequest,
       dataType: 'jsonp'
     });
     return this;

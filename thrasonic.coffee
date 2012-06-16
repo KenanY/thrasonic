@@ -14,7 +14,7 @@ $.fn.thrasonic = (options) ->
   # Extend the settings with those the user has provided
   options = $.extend {}, defaults, options
 
-  format_tweetback = (tweetback) ->
+  formatTweetback = (tweetback) ->
     """
     <div class="thrasonic">
         <a href="#{ tweetback.permalink_url }">
@@ -28,7 +28,7 @@ $.fn.thrasonic = (options) ->
     </div>
     """
 
-  parse_request = (data) ->
+  parseRequest = (data) ->
     author_urls = []
 
     # Topsy actually found tweetbacks
@@ -38,7 +38,7 @@ $.fn.thrasonic = (options) ->
           return true
 
         author_urls.push tweetback.author.url
-        output.append format_tweetback(tweetback)
+        output.append formatTweetback(tweetback)
 
       # Show tweet when avatar is mouseover'd
       $('.thrasonic').mouseover(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').show(); )
@@ -62,7 +62,7 @@ $.fn.thrasonic = (options) ->
     data:
       url: options.location
       perpage: options.limit
-    success: parse_request
+    success: parseRequest
     dataType:'jsonp'
 
   # That's all, folks!
