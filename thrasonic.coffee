@@ -6,7 +6,7 @@ $.fn.thrasonic = (options) ->
   # Default options
   defaults =
       location: location.href,
-      empty_message: "No one's mentioned this page on Twitter yet.
+      emptyMessage: "No one's mentioned this page on Twitter yet.
                        <a href=\"https://twitter.com?status=#{ location.href }\">
                        You could be the first</a>.",
       limit: 50
@@ -29,15 +29,15 @@ $.fn.thrasonic = (options) ->
     """
 
   parseRequest = (data) ->
-    author_urls = []
+    authorUrls = []
 
     # Topsy actually found tweetbacks
     if data.response.list.length > 0
       $.each data.response.list, (i, tweetback) ->
-        if $.inArray(tweetback.author.url, author_urls) > -1
+        if $.inArray(tweetback.author.url, authorUrls) > -1
           return true
 
-        author_urls.push tweetback.author.url
+        authorUrls.push tweetback.author.url
         output.append formatTweetback(tweetback)
 
       # Show tweet when avatar is mouseover'd
@@ -54,7 +54,7 @@ $.fn.thrasonic = (options) ->
       $('.thrasonic').mouseout(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').hide() )
     else
       # Nothing was found; display empty message
-      output.append options.empty_message
+      output.append options.emptyMessage
 
   # Topsy, we can haz tweets, pl0x?
   $.ajax

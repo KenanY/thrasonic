@@ -15,7 +15,7 @@
     output = $(this);
     defaults = {
       location: location.href,
-      empty_message: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>.",
+      emptyMessage: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>.",
       limit: 50
     };
     options = $.extend({}, defaults, options);
@@ -23,14 +23,14 @@
       return "<div class=\"thrasonic\">\n    <a href=\"" + tweetback.permalink_url + "\">\n        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";
     };
     parseRequest = function(data) {
-      var author_urls;
-      author_urls = [];
+      var authorUrls;
+      authorUrls = [];
       if (data.response.list.length > 0) {
         $.each(data.response.list, function(i, tweetback) {
-          if ($.inArray(tweetback.author.url, author_urls) > -1) {
+          if ($.inArray(tweetback.author.url, authorUrls) > -1) {
             return true;
           }
-          author_urls.push(tweetback.author.url);
+          authorUrls.push(tweetback.author.url);
           return output.append(formatTweetback(tweetback));
         });
         $('.thrasonic').mouseover(function() {
@@ -50,7 +50,7 @@
           return $(this).children('.thrasonic_tweet, .thrasonic_pointer').hide();
         });
       } else {
-        return output.append(options.empty_message);
+        return output.append(options.emptyMessage);
       }
     };
     $.ajax({
