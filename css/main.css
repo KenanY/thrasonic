@@ -226,6 +226,7 @@ header h2 {
     font-weight: 300;
     font-size: 20px;
     font-size: 2rem;
+    margin-top: 0;
     margin-bottom: 34px;
     padding: 0 23%;
 }
