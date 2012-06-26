@@ -11,6 +11,17 @@ MOBILE
 PRINT
 */
 
+/**
+ * Apply a natural box layout model to all elements
+ *
+ * You might have heard that the universal * selector is slow.
+ * It's not. It's as fast as any other selector.
+ * Unless you do something like this: .foo > *
+ *
+ * Some evidence: http://cl.ly/Hfep
+ *
+ * Also, worrying about selector optimization is not top priority.
+ */
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -115,6 +126,8 @@ body {
     position: relative;
     -webkit-font-smoothing: antialiased;
 }
+
+/* Headings */
 h1,
 h2,
 h3,
@@ -124,6 +137,8 @@ h6 {
     font-family: 'Garamond', 'Georgia', serif;
     font-weight: normal;
 }
+
+/* Links */
 a {
     text-decoration: none;
     border-bottom: 1px dotted #999;
@@ -135,11 +150,15 @@ a,
 a:visited {
     color: #1863A0;
 }
+
+/* Blockquote */
 blockquote {
     border-left: 4px solid #DDD;
     padding: 0 15px;
     color: #777;
 }
+
+/* Header */
 header {
   text-align: center;
   position: relative;
@@ -160,6 +179,8 @@ header h2 {
     margin-bottom: 34px;
     padding: 0 23%;
 }
+
+/* Main body */
 .doc {
     font: 17px/27px Georgia, Times, “Times New Roman”, serif;
     position: relative;
@@ -172,6 +193,8 @@ header h2 {
 .doc h2 {
     font-size: 31px;
 }
+
+/* Sidebar */
 .sidebar {
     float: left;
     position: fixed;
