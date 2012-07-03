@@ -154,6 +154,8 @@ img, object, embed { max-width: 100%; height: auto; }
 \*------------------------------------*/
 html { background: #fff; }
 body {
+    margin: 0;
+    padding: 0;
     position: relative;
     -webkit-font-smoothing: antialiased;
 }
