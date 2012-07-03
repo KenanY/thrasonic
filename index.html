@@ -16,67 +16,65 @@
 <body>
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <div class="container">
-        <div class="row">
-            <header class="twelve columns centered">
-                <h1>thrasonic</h1>
-                <h2>the new-and-improved tweetback library</h2>
-            </header>
+    <div class="row">
+        <header class="twelve columns centered">
+            <h1>thrasonic</h1>
+            <h2>the new-and-improved tweetback library</h2>
+        </header>
+    </div>
+    <div class="row">
+        <div class="sidebar three columns hide-on-phones">
+            <h2>thrasonic</h2>
+            <p><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=KenanY&repo=thrasonic&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe></p>
+            <h3>Navigate</h3>
+            <ul>
+                <li><a href="#whats-a-tweetback">So what's a tweetback?</a></li>
+                <li><a href="#installing">Installing</a></li>
+            </ul>
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="https://github.com/KenanY/thrasonic">thasonic @ GitHub</a></li>
+                <li><a href="https://github.com/KenanY/thrasonic/issues">Issue Tracker</a></li>
+                <li><a href="https://github.com/KenanY/thrasonic/wiki/Changelog">Changelog</a></li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="sidebar three columns hide-on-phones">
-                <h2>thrasonic</h2>
-                <p><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=KenanY&repo=thrasonic&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe></p>
-                <h3>Navigate</h3>
-                <ul>
-                    <li><a href="#whats-a-tweetback">So what's a tweetback?</a></li>
-                    <li><a href="#installing">Installing</a></li>
-                </ul>
-                <h3>Useful Links</h3>
-                <ul>
-                    <li><a href="https://github.com/KenanY/thrasonic">thasonic @ GitHub</a></li>
-                    <li><a href="https://github.com/KenanY/thrasonic/issues">Issue Tracker</a></li>
-                    <li><a href="https://github.com/KenanY/thrasonic/wiki/Changelog">Changelog</a></li>
-                </ul>
-            </div>
-            <div class="doc nine columns">
-                <blockquote>
-                    <strong>thrasonical</strong>
-                    <p><em>adj.</em> <a href="https://github.com/holman/boastful">Boastful</a>.</p>
-                    <p><em>&mdash;American Heritage<sup>&reg;</sup> Dictionary of the English Language, Fourth Edition</em></p>
-                </blockquote>
-                <a name="whats-a-tweetback"></a>
-                <h2>So what's a tweetback?</h2>
-                <p>Once upon a time there were <a href="https://en.wikipedia.org/wiki/Trackback">trackbacks</a>. If you wrote a blog post, and I thought it was interesting, I could blog about it. Trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "Hey, here's some more people talking about this topic".</p>
-                <p>A few services have started to do the same for Twitter&mdash;a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.</p>
-                <p>Here's the main problems with that approach:</p>
-                <ul>
-                    <li><strong>The content usually sucks</strong>. I've seen a lot of systems—Disqus, for one&mdash;simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying:</li>
-                </ul>
-                <blockquote><p>"RT @someone RT @someoneelse RT @originaldude Hey a blog post <a href="http://example.com">http://example.com</a>".</p></blockquote>
-                <ul>
-                    <li><strong>Most only search Twitter</strong>. Twitter search is cool, quick, and painless, but it doesn't offer full archival access, so older tweets might not show up. It's nice to have a full list.</li>
-                    <li><strong>URL shorteners are confusing</strong>. You shouldn't just search for your main blog post URL; very few on Twitter actually do the whole thing, since characters are money, people. You'd have to search for every short URL that translates to your main post URL.</li>
-                </ul>
-                <p>Luckily, this tiny jQuery plugin tries to solve all those:</p>
-                <ul>
-                    <li><strong>Avatars only</strong>. James Cameron's dream: only avatars. The full content is available through a tooltip, but really you shouldn't expect the tweet content to contribute much anyway.</li>
-                    <li><strong>Uses Topsy</strong>. <a href="http://topsy.com/">Topsy</a> handles both the archival problem and the URL shortener problem. They crawl Twitter for who's linking to who, translating short URLs to full URLs as they go.</li>
-                </ul>
-                <p>You end up with little heads on the footer of your blog, which acts as nifty encouragement to get others to tweet and promote your content. People love seeing their face.</p>
-                <a name="installing"></a>
-                <h2>Installing</h2>
-                <p>You need jQuery:</p>
-                <pre><code data-language="html">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <p>And of course, load thrasonic:</p>
-                <pre><code data-language="html">&lt;script src=&quot;thrasonic.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <p>Execute within <code>$(document).ready()</code>:</p>
-                <pre><code data-language="javascript">$(document).ready(function() {
+        <div class="doc nine columns">
+            <blockquote>
+                <strong>thrasonical</strong>
+                <p><em>adj.</em> <a href="https://github.com/holman/boastful">Boastful</a>.</p>
+                <p><em>&mdash;American Heritage<sup>&reg;</sup> Dictionary of the English Language, Fourth Edition</em></p>
+            </blockquote>
+            <a name="whats-a-tweetback"></a>
+            <h2>So what's a tweetback?</h2>
+            <p>Once upon a time there were <a href="https://en.wikipedia.org/wiki/Trackback">trackbacks</a>. If you wrote a blog post, and I thought it was interesting, I could blog about it. Trackbacks were the way for my blog to let your blog know I'm talking about it. Usually, your blog software would then link to mine as a way of telling your own readers "Hey, here's some more people talking about this topic".</p>
+            <p>A few services have started to do the same for Twitter&mdash;a "tweetback", if you will. Write your blog post, and then these services would search Twitter for whoever would link or discuss it.</p>
+            <p>Here's the main problems with that approach:</p>
+            <ul>
+                <li><strong>The content usually sucks</strong>. I've seen a lot of systems—Disqus, for one&mdash;simply print out the tweet verbatim and try to integrate it into your regular blog comments. This assumes that each and every tweet offers some compelling unique viewpoint. It doesn't. Usually you end up with a bunch of tweetbacks coming in saying:</li>
+            </ul>
+            <blockquote><p>"RT @someone RT @someoneelse RT @originaldude Hey a blog post <a href="http://example.com">http://example.com</a>".</p></blockquote>
+            <ul>
+                <li><strong>Most only search Twitter</strong>. Twitter search is cool, quick, and painless, but it doesn't offer full archival access, so older tweets might not show up. It's nice to have a full list.</li>
+                <li><strong>URL shorteners are confusing</strong>. You shouldn't just search for your main blog post URL; very few on Twitter actually do the whole thing, since characters are money, people. You'd have to search for every short URL that translates to your main post URL.</li>
+            </ul>
+            <p>Luckily, this tiny jQuery plugin tries to solve all those:</p>
+            <ul>
+                <li><strong>Avatars only</strong>. James Cameron's dream: only avatars. The full content is available through a tooltip, but really you shouldn't expect the tweet content to contribute much anyway.</li>
+                <li><strong>Uses Topsy</strong>. <a href="http://topsy.com/">Topsy</a> handles both the archival problem and the URL shortener problem. They crawl Twitter for who's linking to who, translating short URLs to full URLs as they go.</li>
+            </ul>
+            <p>You end up with little heads on the footer of your blog, which acts as nifty encouragement to get others to tweet and promote your content. People love seeing their face.</p>
+            <a name="installing"></a>
+            <h2>Installing</h2>
+            <p>You need jQuery:</p>
+            <pre><code data-language="html">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+            <p>And of course, load thrasonic:</p>
+            <pre><code data-language="html">&lt;script src=&quot;thrasonic.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+            <p>Execute within <code>$(document).ready()</code>:</p>
+            <pre><code data-language="javascript">$(document).ready(function() {
     $('#thrasonic').thrasonic();
 });</code></pre>
-                <p>Tell it where to go:</p>
-                <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
-            </div>
+            <p>Tell it where to go:</p>
+            <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
         </div>
     </div>
 
