@@ -14,6 +14,10 @@ $.fn.thrasonic = (options) ->
   # Extend the settings with those the user has provided
   options = $.extend {}, defaults, options
 
+  # Format the tweetback into HTML
+  #
+  # @param {array} Properties of the tweetback
+  # @return {string} The HTML-formatted tweetback
   formatTweetback = (tweetback) ->
     """
     <div class="thrasonic">
@@ -28,6 +32,9 @@ $.fn.thrasonic = (options) ->
     </div>
     """
 
+  # Parse the results of the Topsy AJAX call
+  #
+  # @param {array} JSON result of the AJAX call to Topsy
   parseRequest = (data) ->
     authorUrls = []
 
@@ -40,7 +47,7 @@ $.fn.thrasonic = (options) ->
         authorUrls.push tweetback.author.url
         output.append formatTweetback(tweetback)
 
-      # Show tweet when avatar is mouseover'd
+      # Show tweet when mouse hovers over avatar
       $('.thrasonic').mouseover(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').show(); )
       $('.thrasonic').mousemove (kmouse) ->
         $(@).children('.thrasonic_tweet').css
@@ -50,13 +57,13 @@ $.fn.thrasonic = (options) ->
           left: $(@).position().left + 18,
           top: $(@).position().top + 15
 
-      # Hide it when mouse leaves
+      # Hide tweet when mouse leaves
       $('.thrasonic').mouseout(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').hide() )
     else
       # Nothing was found; display empty message
       output.append options.emptyMessage
 
-  # Topsy, we can haz tweets, pl0x?
+  # Request tweetbacks from Topsy
   $.ajax
     url: 'http://otter.topsy.com/trackbacks.js'
     data:

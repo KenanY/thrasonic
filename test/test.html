@@ -26,7 +26,11 @@
             module('thrasonic');
 
             test('Selector is correct', function () {
-                equal(($('#thrasonic').thrasonic()).selector, '#thrasonic');
+                equal(($('#thrasonic').thrasonic()).selector, '#thrasonic', 'Correct selector is targetted');
+            });
+
+            test('Length is correct', function () {
+                ok($('#thrasonic').thrasonic().length, 'There was actually output');
             });
         });
     </script>
