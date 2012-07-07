@@ -21,6 +21,8 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
+; CoffeeScript outputs JS with 2-space indents.
+; You shouldn't be editing the JS here anyways.
 [*.js]
 indent_style = space
 indent_size = 2
