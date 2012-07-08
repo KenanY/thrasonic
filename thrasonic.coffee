@@ -10,6 +10,7 @@ $.fn.thrasonic = (options) ->
       emptyMessage: "No one's mentioned this page on Twitter yet.
                        <a href=\"https://twitter.com?status=#{ location.href }\">
                        You could be the first</a>."
+      intent: 'direct'
 
   # Extend the settings with those the user has provided
   options = $.extend {}, defaults, options
@@ -19,9 +20,43 @@ $.fn.thrasonic = (options) ->
   # @param {array} Properties of the tweetback
   # @return {string} The HTML-formatted tweetback
   formatTweetback = (tweetback) ->
-    """
+    first = """
     <div class="thrasonic">
-        <a href="#{ tweetback.permalink_url }">
+    """
+
+    # The tweetback avatar links to different places depending on the `intent` option
+    switch intent
+
+      # Link to the reply page
+      when 'reply'
+        second = """
+            <a href="https://twitter.com/intent/tweet?in_reply_to=#{ tweetback.permalink_url.split('/').pop() }">
+        """
+
+      # Link to the retweet page
+      when 'retweet'
+        second = """
+            <a href="https://twitter.com/intent/retweet?tweet_id=#{ tweetback.permalink_url.split('/').pop() }">
+        """
+
+      # Link to the favorite page
+      when 'favorite'
+        second = """
+            <a href="https://twitter.com/intent/favorite?tweet_id=#{ tweetback.permalink_url.split('/').pop() }">
+        """
+
+      # Link to the author's page
+      when 'author'
+        second = """
+            <a href="https://twitter.com/intent/user?screen_name=#{ tweetback.author.url.split('/').pop() }">
+        """
+
+      # The default option: `direct` (or a nonexistent option) was chosen
+      else
+        second = """
+              <a href="#{ tweetback.permalink_url }">
+          """
+    third = """
             <img src="#{ tweetback.author.photo_url }" />
         </a>
         <div class="thrasonic_pointer"></div>
@@ -31,6 +66,7 @@ $.fn.thrasonic = (options) ->
         </div>
     </div>
     """
+    first + second + third
 
   # Parse the results of the Topsy AJAX call
   #

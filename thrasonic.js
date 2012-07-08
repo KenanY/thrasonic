@@ -16,11 +16,31 @@
     defaults = {
       location: location.href,
       limit: 50,
-      emptyMessage: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>."
+      emptyMessage: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>.",
+      intent: 'direct'
     };
     options = $.extend({}, defaults, options);
     formatTweetback = function(tweetback) {
-      return "<div class=\"thrasonic\">\n    <a href=\"" + tweetback.permalink_url + "\">\n        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";
+      var first, second, third;
+      first = "<div class=\"thrasonic\">";
+      switch (intent) {
+        case 'reply':
+          second = "<a href=\"https://twitter.com/intent/tweet?in_reply_to=" + (tweetback.permalink_url.split('/').pop()) + "\">";
+          break;
+        case 'retweet':
+          second = "<a href=\"https://twitter.com/intent/retweet?tweet_id=" + (tweetback.permalink_url.split('/').pop()) + "\">";
+          break;
+        case 'favorite':
+          second = "<a href=\"https://twitter.com/intent/favorite?tweet_id=" + (tweetback.permalink_url.split('/').pop()) + "\">";
+          break;
+        case 'author':
+          second = "<a href=\"https://twitter.com/intent/user?screen_name=" + (tweetback.author.url.split('/').pop()) + "\">";
+          break;
+        default:
+          second = "<a href=\"" + tweetback.permalink_url + "\">";
+      }
+      third = "        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";
+      return first + second + third;
     };
     parseRequest = function(data) {
       var authorUrls;
