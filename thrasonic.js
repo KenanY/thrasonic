@@ -15,8 +15,8 @@
     output = $(this);
     defaults = {
       location: location.href,
-      emptyMessage: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>.",
-      limit: 50
+      limit: 50,
+      emptyMessage: "No one's mentioned this page on Twitter yet.                       <a href=\"https://twitter.com?status=" + location.href + "\">                       You could be the first</a>."
     };
     options = $.extend({}, defaults, options);
     formatTweetback = function(tweetback) {

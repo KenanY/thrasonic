@@ -5,11 +5,11 @@ $.fn.thrasonic = (options) ->
 
   # Default options
   defaults =
-      location: location.href,
+      location: location.href
+      limit: 50
       emptyMessage: "No one's mentioned this page on Twitter yet.
                        <a href=\"https://twitter.com?status=#{ location.href }\">
-                       You could be the first</a>.",
-      limit: 50
+                       You could be the first</a>."
 
   # Extend the settings with those the user has provided
   options = $.extend {}, defaults, options
