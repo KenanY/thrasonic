@@ -27,7 +27,7 @@ $.fn.thrasonic = (options) ->
 
     # This part of the formatted tweetback (the opening <a> tag) if different depending on the `intent` option.
     # As such, it's separated from the other two parts, which are consistent with every tweetback.
-    switch intent
+    switch options.intent
 
       # Link to the reply page
       when 'reply'
