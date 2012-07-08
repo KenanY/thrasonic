@@ -71,14 +71,13 @@ $(document).ready(function() {
 
 In your `.thrasonic()` call, you can pass in some options:
 
-- **location**: the URL to search Twitter for (default: location.href, the current page)
+- **location**: the URL to search Twitter for (default: `location.href`, the current page)
+- **limit**: maximum tweetbacks to show per page (default: 50, which is also the maximum)
 - **empty_message**: message to display if no tweets are found, HTML allowed. Default:
 
 ``` html
-No one's mentioned this page on Twitter yet. <a href="http://twitter.com?status=page_url_here">You could be the first</a>.
+No one's mentioned this page on Twitter yet. <a href="https://twitter.com?status=page_url_here">You could be the first</a>.
 ```
-
-- **limit**: maximum tweetbacks to show per page (default: 50, which is also the maximum)
 
 ## Found an issue?
 
