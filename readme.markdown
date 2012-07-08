@@ -37,7 +37,7 @@ Here's an old snapshot of what the footer from [Zach Holman's blog](holman) used
 
 ## Installing
 
-Feel free to browse `example.html` for a basic example. Otherwise, the general steps:
+Feel free to browse `example/example.html` for a basic example. Otherwise, the general steps:
 
 1\. Load jQuery:
 
@@ -65,7 +65,7 @@ $(document).ready(function() {
 <div id="thrasonic"></div>
 ```
 
-5\. Style accordingly. For a starting point, check out `thrasonic.css`.
+5\. Style accordingly. For a starting point, check out `example/thrasonic.css`.
 
 ## Optional options
 
