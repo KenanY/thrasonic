@@ -23,7 +23,7 @@
     formatTweetback = function(tweetback) {
       var first, second, third;
       first = "<div class=\"thrasonic\">";
-      switch (intent) {
+      switch (options.intent) {
         case 'reply':
           second = "<a href=\"https://twitter.com/intent/tweet?in_reply_to=" + (tweetback.permalink_url.split('/').pop()) + "\">";
           break;
