@@ -20,11 +20,13 @@ $.fn.thrasonic = (options) ->
   # @param {array} Properties of the tweetback
   # @return {string} The HTML-formatted tweetback
   formatTweetback = (tweetback) ->
+    # The beginning of the formatted tweetback
     first = """
     <div class="thrasonic">
     """
 
-    # The tweetback avatar links to different places depending on the `intent` option
+    # This part of the formatted tweetback (the opening <a> tag) if different depending on the `intent` option.
+    # As such, it's separated from the other two parts, which are consistent with every tweetback.
     switch intent
 
       # Link to the reply page
@@ -51,11 +53,14 @@ $.fn.thrasonic = (options) ->
             <a href="https://twitter.com/intent/user?screen_name=#{ tweetback.author.url.split('/').pop() }">
         """
 
-      # The default option: `direct` (or a nonexistent option) was chosen
+      # The default option: `direct` (or a nonexistent option) was chosen.
+      # Link directly to the tweet.
       else
         second = """
               <a href="#{ tweetback.permalink_url }">
           """
+
+    # The rest of the formatted tweetback
     third = """
             <img src="#{ tweetback.author.photo_url }" />
         </a>
@@ -66,6 +71,8 @@ $.fn.thrasonic = (options) ->
         </div>
     </div>
     """
+
+    # Return the completed tweetback
     first + second + third
 
   # Parse the results of the Topsy AJAX call
