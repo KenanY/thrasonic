@@ -187,10 +187,38 @@ a:visited {
 }
 
 /* Blockquote */
-blockquote {
-    border-left: 4px solid #DDD;
-    padding: 0 15px;
+blockquote,
+blockquote p {
+    line-height: 1.5;
     color: #777;
+}
+blockquote {
+    margin: 0 0 17px;
+    padding: 9px 20px 0 19px;
+    border-left: 1px solid #ddd;
+}
+blockquote cite {
+    display: block;
+    font-size: 13px;
+    color: #555;
+}
+blockquote cite:before {
+    content: "\2014 \0020";
+}
+blockquote cite a,
+blockquote cite a:visited {
+    color: #555;
+}
+
+abbr, acronym {
+    text-transform: uppercase;
+    font-size: 90%;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    cursor: help;
+}
+abbr {
+    text-transform: none;
 }
 
 /* Header */
@@ -212,7 +240,7 @@ header h1 {
     line-height: 1.3;
     color: #777;
     font-weight: 300;
-    margin-bottom: 22.652px;
+    margin-bottom: 17px;
 }
 
 /* Main body */
@@ -225,9 +253,8 @@ header h1 {
     padding-top: 115px;
     overflow: hidden;
 }
-.doc h2 {
-    font-size: 31px;
-}
+.doc h2 { font-size: 37px; }
+.doc h3 { font-size: 27px; }
 
 /* Sidebar */
 .sidebar {
