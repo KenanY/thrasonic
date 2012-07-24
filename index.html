@@ -78,6 +78,27 @@
 });</code></pre>
                 <p>Tell it where to go:</p>
                 <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
+                <h3>Modernizr.load</h3>
+                <p>If you use Modernizr to load your scripts, loading Thrasonic will look something like this:</p>
+                <pre><code data-language="javascript">Modernizr.load([
+    {
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+        complete: function () {
+            if ( !window.jQuery ) {
+                Modernizr.load('jquery-1.7.2.min.js');
+            }
+        }
+    },
+    {
+        load: 'thrasonic.min.js',
+        complete: function () {
+            $(document).ready(function() {
+                $('#thrasonic').thrasonic();
+            });
+        }
+    }
+]);</code></pre>
+                <p>Only small modifications are needed to adapt this to yepnope.js</p>
             </section>
         </div>
     </div>
