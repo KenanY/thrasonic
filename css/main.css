@@ -171,13 +171,6 @@ h6 {
     font-weight: normal;
 }
 
-.subheader {
-    line-height: 1.3;
-    color: #777;
-    font-weight: 300;
-    margin-bottom: 17px;
-}
-
 /* Links */
 a {
     text-decoration: none;
@@ -211,6 +204,13 @@ header h1 {
     font-size: 7.0rem;
     position: relative;
     margin-bottom: 0;
+}
+
+.subheader {
+    line-height: 1.3;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 17px;
 }
 
 /* Main body */
