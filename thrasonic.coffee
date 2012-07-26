@@ -55,7 +55,6 @@ $.fn.thrasonic = (options) ->
             <a href="https://twitter.com/intent/user?screen_name=#{ tweetback.author.url.split('/').pop() }">
         """
 
-      # The default option: `direct` (or a nonexistent option) was chosen.
       # Link directly to the tweet.
       else
         second = """
