@@ -306,7 +306,6 @@ header h1 {
  * @version 1.0.0
  */
 pre {
-    background: #fdf6e3;
     word-wrap: break-word;
     margin: 0px;
     padding: 0px;
@@ -316,6 +315,7 @@ pre {
     margin-bottom: 20px;
 }
 pre, code {
+    background: #fdf6e3;
     font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;
 }
 pre .comment {
