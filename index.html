@@ -31,7 +31,12 @@
             <h3>Navigate</h3>
             <ul>
                 <li><a href="#whats-a-tweetback">So what's a tweetback?</a></li>
-                <li><a href="#installing">Installing</a></li>
+                <li>
+                    <a href="#installing">Installing</a>
+                    <ul>
+                        <li><a href="#modernizr-load">Modernizr.load</a></li>
+                    </ul>
+                </li>
                 <li><a href="#configuration">Configuration</a></li>
             </ul>
             <h3>Useful Links</h3>
@@ -79,9 +84,10 @@
 });</code></pre>
                 <p>Tell it where to go:</p>
                 <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
-                <h3>Modernizr.load</h3>
-                <p>If you use Modernizr to load your scripts, loading Thrasonic will look something like this:</p>
-                <pre><code data-language="javascript">Modernizr.load([
+                <section id="modernizr-load">
+                    <h3>Modernizr.load</h3>
+                    <p>If you use Modernizr to load your scripts, loading Thrasonic will look something like this:</p>
+                    <pre><code data-language="javascript">Modernizr.load([
     {
         load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
         complete: function () {
@@ -99,7 +105,8 @@
         }
     }
 ]);</code></pre>
-                <p>Only small modifications are needed to adapt this to yepnope.js</p>
+                    <p>Only small modifications are needed to adapt this to yepnope.js</p>
+                </section>
             </section>
             <section id="configuration">
                 <h2>Configuration</h2>
