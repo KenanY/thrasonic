@@ -11,18 +11,6 @@ Details and installation instructions can be found at the Thrasonic website: **h
 
 ![old boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
 
-## Optional options
-
-In your `.thrasonic()` call, you can pass in some options:
-
-- **location**: the URL to search Twitter for (default: `location.href`, the current page)
-- **limit**: maximum tweetbacks to show per page (default: 50, which is also the maximum)
-- **empty_message**: message to display if no tweets are found, HTML allowed. Default:
-
-``` html
-No one's mentioned this page on Twitter yet. <a href="https://twitter.com?status=page_url_here">You could be the first</a>.
-```
-
 ## Found an issue?
 
 If you've come across a problem with the code, submit it to the [Issue Tracker][issues].  When filing a new bug, please remember to include:
