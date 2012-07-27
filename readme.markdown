@@ -7,7 +7,7 @@
 
 Thrasonic is an unofficial continuation of the [boastful][] tweetback library by [Zach Holman][holman]; under new management: [Kenan Yildirim][kenany].
 
-Details and installation instructions can be found at the Thrasonic website: <**http://kenany.github.com/thrasonic/**>
+Details and installation instructions can be found at the Thrasonic website: **http://kenany.github.com/thrasonic/**
 
 ![old boastful screenshot](http://files.droplr.com/files/11322372/oO5q.jquery.boastful.png)
 
