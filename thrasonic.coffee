@@ -131,7 +131,7 @@ Thrasonic = (->
         $('.thrasonic').mouseout(() -> $(@).children('.thrasonic_tweet, .thrasonic_pointer').hide() )
       else
         # Nothing was found; display empty message
-        output.append options.emptyMessage
+        output.append @options.emptyMessage
 
     boast: ->
       unless params.started
@@ -139,8 +139,8 @@ Thrasonic = (->
         $.ajax
           url: 'http://otter.topsy.com/trackbacks.js'
           data:
-            url: options.location
-            perpage: options.limit
+            url: @options.location
+            perpage: @options.limit
           success: parseRequest
           dataType:'jsonp'
         params.started = true

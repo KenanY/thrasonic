@@ -30,8 +30,7 @@
     };
     output = $(this);
     init = function() {
-      var parseRequest;
-      ({
+      return {
         setInitialOptions: function(options) {
           var defaults;
           defaults = {
@@ -67,47 +66,45 @@
           }
           third = "        <img src=\"" + tweetback.author.photo_url + "\" />\n    </a>\n    <div class=\"thrasonic_pointer\"></div>\n    <div class=\"thrasonic_tweet\" style=\"display: none\">\n        <div class=\"thrasonic_handle\">@" + (tweetback.author.url.split('/').pop()) + "</div>\n        <div class=\"thrasonic_content\">" + tweetback.content + "</div>\n    </div>\n</div>";
           return first + second + third;
-        }
-      });
-      parseRequest = function(data) {
-        var authorUrls;
-        authorUrls = [];
-        if (data.response.list.length > 0) {
-          $.each(data.response.list, function(i, tweetback) {
-            if ($.inArray(tweetback.author.url, authorUrls) > -1) {
-              return true;
-            }
-            authorUrls.push(tweetback.author.url);
-            return output.append(formatTweetback(tweetback));
-          });
-          $('.thrasonic').mouseover(function() {
-            return $(this).children('.thrasonic_tweet, .thrasonic_pointer').show();
-          });
-          $('.thrasonic').mousemove(function(kmouse) {
-            $(this).children('.thrasonic_tweet').css({
-              left: $(this).position().left - 105,
-              top: $(this).position().top + 25
+        },
+        parseRequest: function(data) {
+          var authorUrls;
+          authorUrls = [];
+          if (data.response.list.length > 0) {
+            $.each(data.response.list, function(i, tweetback) {
+              if ($.inArray(tweetback.author.url, authorUrls) > -1) {
+                return true;
+              }
+              authorUrls.push(tweetback.author.url);
+              return output.append(formatTweetback(tweetback));
             });
-            return $(this).children('.thrasonic_pointer').css({
-              left: $(this).position().left + 18,
-              top: $(this).position().top + 15
+            $('.thrasonic').mouseover(function() {
+              return $(this).children('.thrasonic_tweet, .thrasonic_pointer').show();
             });
-          });
-          return $('.thrasonic').mouseout(function() {
-            return $(this).children('.thrasonic_tweet, .thrasonic_pointer').hide();
-          });
-        } else {
-          return output.append(options.emptyMessage);
-        }
-      };
-      return {
+            $('.thrasonic').mousemove(function(kmouse) {
+              $(this).children('.thrasonic_tweet').css({
+                left: $(this).position().left - 105,
+                top: $(this).position().top + 25
+              });
+              return $(this).children('.thrasonic_pointer').css({
+                left: $(this).position().left + 18,
+                top: $(this).position().top + 15
+              });
+            });
+            return $('.thrasonic').mouseout(function() {
+              return $(this).children('.thrasonic_tweet, .thrasonic_pointer').hide();
+            });
+          } else {
+            return output.append(this.options.emptyMessage);
+          }
+        },
         boast: function() {
           if (!params.started) {
             $.ajax({
               url: 'http://otter.topsy.com/trackbacks.js',
               data: {
-                url: options.location,
-                perpage: options.limit
+                url: this.options.location,
+                perpage: this.options.limit
               },
               success: parseRequest,
               dataType: 'jsonp'
