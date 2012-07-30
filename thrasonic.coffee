@@ -1,5 +1,8 @@
 $ = jQuery
 
+$.thrasonic = ->
+  Thrasonic.getInstance()
+
 $.fn.thrasonic = (options) ->
   output = $(@)
 
@@ -118,3 +121,18 @@ $.fn.thrasonic = (options) ->
 
   # That's all, folks!
   return @
+
+Thrasonic = ->
+  params =
+    instantiated: null
+    started: null
+
+  getInstance: ->
+    unless params.instantiated
+      params.instantiated = init()
+      params.instantiated.setInitialOptions()
+    params.instantiated
+
+  free: ->
+    params = {}
+    null
