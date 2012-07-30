@@ -105,7 +105,7 @@ Thrasonic = (->
     # Parse the results of the Topsy AJAX call
     #
     # @param {array} JSON result of the AJAX call to Topsy
-    parseRequest = (data) ->
+    parseRequest: (data) ->
       authorUrls = []
 
       # Topsy actually found tweetbacks
