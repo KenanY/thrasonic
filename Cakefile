@@ -45,3 +45,9 @@ task "build", ->
     fs.writeFile OUTFILE, HEADER + stdout, (err) ->
       throw err if err
     exec "uglifyjs #{ OUTFILE } > #{ MINFILE }"
+
+task 'dev', ->
+  invoke 'build'
+  fs.watchFile INFILE, interval: 250, (curr, prev) ->
+    if curr.mtime > prev.mtime
+      invoke 'build'
