@@ -4,8 +4,8 @@ $.thrasonic = ->
   Thrasonic.getInstance()
 
 $.fn.thrasonic = (options) ->
-  thrasonic = Thrasonic.getInstance()
-  thrasonic.setOptions options
+  thrasonic = new Thrasonic(options)
+  # thrasonic.setOptions options
   thrasonic.boast @
   thrasonic
 
@@ -14,11 +14,10 @@ class Thrasonic
     instantiated: null
     started: null
 
-  # Set plugin initial options
-  #
-  # @param [Object] options
-  #
-  # @return void
+  constructor: (options) ->
+    @setInitialOptions()
+    @setOptions(options)
+
   setInitialOptions: (options) ->
     defaults =
       location: location.href
@@ -27,7 +26,7 @@ class Thrasonic
       <a href=\"https://twitter.com?status=#{ location.href }\">
       You could be the first</a>."
       intent: 'direct'
-    @options = @options or $.extend(defaults, options)
+    @options = @options or $.extend {}, defaults, options
 
   # Set plugin options
   #
@@ -35,15 +34,15 @@ class Thrasonic
   #
   # @return void
   setOptions: (options) ->
-    @options = @options or @setInitialOptions(options)
-    @options = $.extend(@options, options);
+    @options = @options or @setInitialOptions options
+    @options = $.extend @options, options
 
   # Format the tweetback into HTML
   #
   # @param {array} Properties of the tweetback
   #
   # @return {string} The HTML-formatted tweetback
-  @formatTweetback: (tweetback) ->
+  formatTweetback: (tweetback) ->
     first = """
     <div class="thrasonic">
     """
@@ -119,12 +118,14 @@ class Thrasonic
         dataType:'jsonp'
     params.started = true
 
-  @getInstance: ->
+  ###
+  getInstance: ->
     unless params.instantiated
       params.instantiated = new Thrasonic()
       params.instantiated.setInitialOptions()
     params.instantiated
 
-  @free: ->
+  free: ->
     params = {}
     null
+  ###

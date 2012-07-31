@@ -16,8 +16,7 @@
 
   $.fn.thrasonic = function(options) {
     var thrasonic;
-    thrasonic = Thrasonic.getInstance();
-    thrasonic.setOptions(options);
+    thrasonic = new Thrasonic(options);
     thrasonic.boast(this);
     return thrasonic;
   };
@@ -25,12 +24,15 @@
   Thrasonic = (function() {
     var params;
 
-    function Thrasonic() {}
-
     params = {
       instantiated: null,
       started: null
     };
+
+    function Thrasonic(options) {
+      this.setInitialOptions();
+      this.setOptions(options);
+    }
 
     Thrasonic.prototype.setInitialOptions = function(options) {
       var defaults;
@@ -40,7 +42,7 @@
         emptyMessage: "No one's mentioned this page on Twitter yet.      <a href=\"https://twitter.com?status=" + location.href + "\">      You could be the first</a>.",
         intent: 'direct'
       };
-      return this.options = this.options || $.extend(defaults, options);
+      return this.options = this.options || $.extend({}, defaults, options);
     };
 
     Thrasonic.prototype.setOptions = function(options) {
@@ -48,7 +50,7 @@
       return this.options = $.extend(this.options, options);
     };
 
-    Thrasonic.formatTweetback = function(tweetback) {
+    Thrasonic.prototype.formatTweetback = function(tweetback) {
       var first, second, third;
       first = "<div class=\"thrasonic\">";
       switch (this.options.intent) {
@@ -119,18 +121,18 @@
       return params.started = true;
     };
 
-    Thrasonic.getInstance = function() {
-      if (!params.instantiated) {
-        params.instantiated = new Thrasonic();
-        params.instantiated.setInitialOptions();
-      }
-      return params.instantiated;
-    };
+    /*
+      getInstance: ->
+        unless params.instantiated
+          params.instantiated = new Thrasonic()
+          params.instantiated.setInitialOptions()
+        params.instantiated
+    
+      free: ->
+        params = {}
+        null
+    */
 
-    Thrasonic.free = function() {
-      params = {};
-      return null;
-    };
 
     return Thrasonic;
 
