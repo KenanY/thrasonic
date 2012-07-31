@@ -115,8 +115,8 @@
           success: this.parseRequest,
           dataType: 'jsonp'
         });
-        return params.started = true;
       }
+      return params.started = true;
     };
 
     Thrasonic.getInstance = function() {
@@ -127,7 +127,7 @@
       return params.instantiated;
     };
 
-    Thrasonic.prototype.free = function() {
+    Thrasonic.free = function() {
       params = {};
       return null;
     };

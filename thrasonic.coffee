@@ -87,7 +87,6 @@ class Thrasonic
     output = $(@)
     authorUrls = []
 
-    # Topsy actually found tweetbacks
     if data.response.list.length > 0
       $.each data.response.list, (i, tweetback) ->
         if $.inArray(tweetback.author.url, authorUrls) > -1
@@ -118,7 +117,7 @@ class Thrasonic
           perpage: @options.limit
         success: @parseRequest
         dataType:'jsonp'
-      params.started = true
+    params.started = true
 
   @getInstance: ->
     unless params.instantiated
@@ -126,6 +125,6 @@ class Thrasonic
       params.instantiated.setInitialOptions()
     params.instantiated
 
-  free: ->
+  @free: ->
     params = {}
     null
