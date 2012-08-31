@@ -79,7 +79,7 @@
                 <pre><code data-language="html">&lt;script src=&quot;thrasonic.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                 <p>Execute within <code>$(document).ready()</code>:</p>
                 <pre><code data-language="javascript">$(document).ready(function() {
-    $('#thrasonic').thrasonic();
+  $('#thrasonic').thrasonic();
 });</code></pre>
                 <p>Tell it where to go:</p>
                 <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
@@ -87,22 +87,22 @@
                     <h3>Modernizr.load</h3>
                     <p>If you use <a href="http://modernizr.com/">Modernizr</a> to load your scripts, loading Thrasonic will look something like this:</p>
                     <pre><code data-language="javascript">Modernizr.load([
-    {
-        load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
-        complete: function () {
-            if ( !window.jQuery ) {
-                Modernizr.load('jquery-1.7.2.min.js');
-            }
-        }
-    },
-    {
-        load: 'thrasonic.min.js',
-        complete: function () {
-            $(document).ready(function() {
-                $('#thrasonic').thrasonic();
-            });
-        }
+  {
+    load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+    complete: function () {
+      if ( !window.jQuery ) {
+        Modernizr.load('jquery-1.7.2.min.js');
+      }
     }
+  },
+  {
+    load: 'thrasonic.min.js',
+    complete: function () {
+      $(document).ready(function() {
+        $('#thrasonic').thrasonic();
+      });
+    }
+  }
 ]);</code></pre>
                     <p>Only small modifications are needed to adapt this to yepnope.js</p>
                 </section>
@@ -131,28 +131,28 @@
     <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
 
     <script>
-        Modernizr.load([
-            {
-                load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
-                complete: function () {
-                    if ( !window.jQuery ) {
-                        Modernizr.load('js/vendor/jquery-1.7.2.min.js');
-                    }
-                }
-            },
-            {
-                load: ['js/vendor/rainbow.min.js', 'js/plugins.js'],
-                complete: function () {
-                    Rainbow.color();
-                }
+      Modernizr.load([
+        {
+          load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+          complete: function () {
+            if ( !window.jQuery ) {
+              Modernizr.load('js/vendor/jquery-1.7.2.min.js');
             }
-        ]);
+          }
+        },
+        {
+          load: ['js/vendor/rainbow.min.js', 'js/plugins.js'],
+          complete: function () {
+            Rainbow.color();
+          }
+        }
+      ]);
     </script>
     <script>
-        var _gaq=[['_setAccount','UA-23615903-2'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+      var _gaq=[['_setAccount','UA-23615903-2'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 </body>
 </html>
