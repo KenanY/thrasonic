@@ -127,7 +127,7 @@
           params.instantiated = new Thrasonic()
           params.instantiated.setInitialOptions()
         params.instantiated
-    
+
       free: ->
         params = {}
         null
