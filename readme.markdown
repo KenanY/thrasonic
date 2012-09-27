@@ -1,4 +1,4 @@
-﻿# Thrasonic
+# Thrasonic
 
 > ### thrasonical
 > _adj._ [Boastful][boastful].
