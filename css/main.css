@@ -113,7 +113,7 @@ h5,
 h6 {
     text-rendering: optimizeLegibility;
     font-family: 'Garamond', 'Georgia', serif;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 /* Links */
