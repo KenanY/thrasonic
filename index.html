@@ -8,7 +8,7 @@
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>thrasonic</title>
+    <title>Thrasonic</title>
     <meta name="description" content="a continuation of Zach Holman's boastful tweetback library">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -22,13 +22,13 @@
 
     <div class="row">
         <header class="twelve columns centered">
-            <h1>thrasonic</h1>
+            <h1>Thrasonic</h1>
             <h2 class="subheader">the new-and-improved tweetback library</h2>
         </header>
     </div>
     <div class="row">
         <div class="sidebar three columns hide-for-small">
-            <h2>thrasonic</h2>
+            <h2>Thrasonic</h2>
             <p><iframe src="http://ghbtns.com/github-btn.html?user=KenanY&repo=thrasonic&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe></p>
             <h3>Navigate</h3>
             <ul>
@@ -75,8 +75,8 @@
             </section>
             <section id="installing">
                 <h2>Installing</h2>
-                <p>You need <a href="http://jquery.com/">jQuery</a>:</p>
-                <pre><code data-language="html">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <p>You need <a href="http://jquery.com/">jQuery</a> (at least 1.5, but you really should be using the latest):</p>
+                <pre><code data-language="html">&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                 <p>And of course, load Thrasonic:</p>
                 <pre><code data-language="html">&lt;script src=&quot;thrasonic.min.js&quot;&gt;&lt;/script&gt;</code></pre>
                 <p>Execute within <code>$(document).ready()</code>:</p>
@@ -87,13 +87,13 @@
                 <pre><code data-language="html">&lt;div id=&quot;thrasonic&quot;&gt;&lt;/div&gt;</code></pre>
                 <section id="modernizr-load">
                     <h3>Modernizr.load</h3>
-                    <p>If you use <a href="http://modernizr.com/">Modernizr</a> to load your scripts, loading Thrasonic will look something like this:</p>
+                    <p>If you use <a href="http://modernizr.com/">Modernizr.load</a> (or yepnop.js) to load your scripts, loading Thrasonic will look something like this:</p>
                     <pre><code data-language="javascript">Modernizr.load([
   {
-    load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+    load: '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js',
     complete: function () {
       if ( !window.jQuery ) {
-        Modernizr.load('jquery-1.7.2.min.js');
+        Modernizr.load('jquery-1.8.2.min.js');
       }
     }
   },
@@ -106,7 +106,10 @@
     }
   }
 ]);</code></pre>
-                    <p>Only small modifications are needed to adapt this to yepnope.js</p>
+                </section>
+                <section id="bower">
+                    <p>If you like package managers, you can use <a href="http://twitter.github.com/bower/">Bower</a> to install Thrasonic.</p>
+                    <pre><code data-language="javascript">bower install thrasonic</code></pre>
                 </section>
             </section>
             <section id="configuration">
