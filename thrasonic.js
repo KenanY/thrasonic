@@ -46,7 +46,7 @@
       var authorUrls;
       authorUrls = [];
       if (data.response.list.length > 0) {
-        _(data.response.list).forEach(function(tweetback, i) {
+        $.each(data.response.list, function(i, tweetback) {
           if ($.inArray(tweetback.author.url, authorUrls) > -1) {
             return true;
           }
