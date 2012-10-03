@@ -30,32 +30,22 @@ $.fn.thrasonic = (options) ->
     # As such, it's separated from the other two parts, which are consistent
     #  with every tweetback.
     switch options.intent
-
-      # Link to the reply page
       when 'reply'
         second = """
             <a href="https://twitter.com/intent/tweet?in_reply_to=#{ tweetback.permalink_url.split('/').pop() }">
         """
-
-      # Link to the retweet page
       when 'retweet'
         second = """
             <a href="https://twitter.com/intent/retweet?tweet_id=#{ tweetback.permalink_url.split('/').pop() }">
         """
-
-      # Link to the favorite page
       when 'favorite'
         second = """
             <a href="https://twitter.com/intent/favorite?tweet_id=#{ tweetback.permalink_url.split('/').pop() }">
         """
-
-      # Link to the author's page
       when 'author'
         second = """
             <a href="https://twitter.com/intent/user?screen_name=#{ tweetback.author.url.split('/').pop() }">
         """
-
-      # Link directly to the tweet.
       else
         second = """
               <a href="#{ tweetback.permalink_url }">
@@ -77,6 +67,12 @@ $.fn.thrasonic = (options) ->
     first + second + third
 
   # Parse the results of the Topsy AJAX call
+  #
+  # NOTE: See the $.each call? It's not the fastest iterative function around.
+  #       I've tested its speed against that of Lodash's and Underscore's
+  #       functions, and have found varying results. For now, I'm sticking with
+  #       $.each because we already require jQuery (for now?).
+  #       Try out the test: http://jsperf.com/jquery-each-vs-lodash-each-on-json
   #
   # @param {array} JSON result of the AJAX call to Topsy
   parseRequest = (data) ->
